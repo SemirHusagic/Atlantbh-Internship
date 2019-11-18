@@ -62,9 +62,7 @@ public class PG1 {
 	        action.click();
        
 	        //move marker     
-//	        JavascriptExecutor js = (JavascriptExecutor) driver;
-//	        js.executeScript("document.getElementsByClassName('leaflet-marker-icon')[0].style.marginLeft = \"-120px\"");
-	        moveMarkerLeft("120px");    
+		UpdatemoveMarkerLeft("120px");    
       
 	        //scroll down and click on cerate	        
 	        WebElement createButton = driver.findElement(By.xpath("//button[@class='btn btn-success']"));
