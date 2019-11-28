@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="1" ignored="0" total="9" passed="8">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="579799" started-at="2019-11-27T00:41:36 CET" finished-at="2019-11-27T00:51:16 CET">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="579799" started-at="2019-11-27T00:41:36 CET" finished-at="2019-11-27T00:51:16 CET">
+      <class name="test.TestZoomFeature">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestZoomFeature@731a74c]" name="OpenPage" is-config="true" duration-ms="96758" started-at="2019-11-27T00:44:23 CET" finished-at="2019-11-27T00:46:00 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenPage -->
+        <test-method status="PASS" signature="ZoomInMap()[pri:0, instance:test.TestZoomFeature@731a74c]" name="ZoomInMap" duration-ms="493" started-at="2019-11-27T00:49:56 CET" finished-at="2019-11-27T00:49:56 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ZoomInMap -->
+        <test-method status="PASS" signature="ZoomOutMap()[pri:1, instance:test.TestZoomFeature@731a74c]" name="ZoomOutMap" duration-ms="130" started-at="2019-11-27T00:49:56 CET" finished-at="2019-11-27T00:49:56 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ZoomOutMap -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestZoomFeature@731a74c]" name="tearDownTest" is-config="true" duration-ms="4455" started-at="2019-11-27T00:51:11 CET" finished-at="2019-11-27T00:51:16 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- test.TestZoomFeature -->
+      <class name="test.TestLanguageFromEngToBs">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestLanguageFromEngToBs@6ddf90b0]" name="OpenPage" is-config="true" duration-ms="27658" started-at="2019-11-27T00:42:27 CET" finished-at="2019-11-27T00:42:55 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenPage -->
+        <test-method status="PASS" signature="ChangeFromEngToBs()[pri:0, instance:test.TestLanguageFromEngToBs@6ddf90b0]" name="ChangeFromEngToBs" duration-ms="64078" started-at="2019-11-27T00:47:18 CET" finished-at="2019-11-27T00:48:22 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeFromEngToBs -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestLanguageFromEngToBs@6ddf90b0]" name="tearDownTest" is-config="true" duration-ms="5665" started-at="2019-11-27T00:50:53 CET" finished-at="2019-11-27T00:50:59 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- test.TestLanguageFromEngToBs -->
+      <class name="test.TestCreateObjectFeature">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestCreateObjectFeature@57536d79]" name="OpenPage" is-config="true" duration-ms="24059" started-at="2019-11-27T00:42:03 CET" finished-at="2019-11-27T00:42:27 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenPage -->
+        <test-method status="FAIL" signature="CreatePlaceTest()[pri:0, instance:test.TestCreateObjectFeature@57536d79]" name="CreatePlaceTest" duration-ms="16253" started-at="2019-11-27T00:48:22 CET" finished-at="2019-11-27T00:48:38 CET">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button type="button" class="btn btn-success" data-ember-action="1427">...</button> is not clickable at point (282, 569). Other element would receive the click: <div class="row">...</div>
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T16:15:24'
+System info: host: 'SEMA-PC', ip: '169.254.123.24', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Sema\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:57787}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 079368553c29276bc685bb2a37dacd49]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="button" class="btn btn-success" data-ember-action="1427">...</button> is not clickable at point (282, 569). Other element would receive the click: <div class="row">...</div>
+  (Session info: chrome=78.0.3904.108)
+Build info: version: '4.0.0-alpha-1', revision: 'd1d3728cae', time: '2019-04-24T16:15:24'
+System info: host: 'SEMA-PC', ip: '169.254.123.24', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 78.0.3904.108, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\Sema\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:57787}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 079368553c29276bc685bb2a37dacd49
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+at java.lang.reflect.Constructor.newInstance(Unknown Source)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:190)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:124)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:83)
+at page.CreatePlace.clickCreateButton(CreatePlace.java:113)
+at test.TestCreateObjectFeature.CreatePlaceTest(TestCreateObjectFeature.java:36)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CreatePlaceTest -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestCreateObjectFeature@57536d79]" name="tearDownTest" is-config="true" duration-ms="9365" started-at="2019-11-27T00:50:44 CET" finished-at="2019-11-27T00:50:53 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- test.TestCreateObjectFeature -->
+      <class name="test.TestSocialFacebookIcon">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestSocialFacebookIcon@369f73a2]" name="OpenPage" is-config="true" duration-ms="28737" started-at="2019-11-27T00:42:55 CET" finished-at="2019-11-27T00:43:24 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenPage -->
+        <test-method status="PASS" signature="FacebookIcon()[pri:0, instance:test.TestSocialFacebookIcon@369f73a2]" name="FacebookIcon" duration-ms="11752" started-at="2019-11-27T00:48:38 CET" finished-at="2019-11-27T00:48:50 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FacebookIcon -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestSocialFacebookIcon@369f73a2]" name="tearDownTest" is-config="true" duration-ms="6532" started-at="2019-11-27T00:50:59 CET" finished-at="2019-11-27T00:51:05 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- test.TestSocialFacebookIcon -->
+      <class name="test.TestCommentSuggestionFesture">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestCommentSuggestionFesture@3b0143d3]" name="OpenPage" is-config="true" duration-ms="9811" started-at="2019-11-27T00:41:36 CET" finished-at="2019-11-27T00:41:46 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenPage -->
+        <test-method status="PASS" signature="SuggestFeature()[pri:0, instance:test.TestCommentSuggestionFesture@3b0143d3]" name="SuggestFeature" duration-ms="49814" started-at="2019-11-27T00:48:50 CET" finished-at="2019-11-27T00:49:40 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SuggestFeature -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestCommentSuggestionFesture@3b0143d3]" name="tearDownTest" is-config="true" duration-ms="24050" started-at="2019-11-27T00:49:57 CET" finished-at="2019-11-27T00:50:21 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- test.TestCommentSuggestionFesture -->
+      <class name="test.TestSuggestionFesture">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestSuggestionFesture@5a8e6209]" name="OpenPage" is-config="true" duration-ms="59348" started-at="2019-11-27T00:43:24 CET" finished-at="2019-11-27T00:44:23 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenPage -->
+        <test-method status="PASS" signature="SuggestFeature()[pri:0, instance:test.TestSuggestionFesture@5a8e6209]" name="SuggestFeature" duration-ms="15637" started-at="2019-11-27T00:49:40 CET" finished-at="2019-11-27T00:49:56 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SuggestFeature -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestSuggestionFesture@5a8e6209]" name="tearDownTest" is-config="true" duration-ms="5985" started-at="2019-11-27T00:51:05 CET" finished-at="2019-11-27T00:51:11 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- test.TestSuggestionFesture -->
+      <class name="test.TestContentMenuArt">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestContentMenuArt@4b4523f8]" name="OpenPage" is-config="true" duration-ms="8164" started-at="2019-11-27T00:41:55 CET" finished-at="2019-11-27T00:42:03 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenPage -->
+        <test-method status="PASS" signature="Accommodation()[pri:0, instance:test.TestContentMenuArt@4b4523f8]" name="Accommodation" duration-ms="44279" started-at="2019-11-27T00:46:00 CET" finished-at="2019-11-27T00:46:44 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Accommodation -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestContentMenuArt@4b4523f8]" name="tearDownTest" is-config="true" duration-ms="11169" started-at="2019-11-27T00:50:33 CET" finished-at="2019-11-27T00:50:44 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- test.TestContentMenuArt -->
+      <class name="test.TestContentMenuAccommodation">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestContentMenuAccommodation@1f28c152]" name="OpenPage" is-config="true" duration-ms="9103" started-at="2019-11-27T00:41:46 CET" finished-at="2019-11-27T00:41:55 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenPage -->
+        <test-method status="PASS" signature="Accommodation()[pri:0, instance:test.TestContentMenuAccommodation@1f28c152]" name="Accommodation" duration-ms="33139" started-at="2019-11-27T00:46:45 CET" finished-at="2019-11-27T00:47:18 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Accommodation -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestContentMenuAccommodation@1f28c152]" name="tearDownTest" is-config="true" duration-ms="12119" started-at="2019-11-27T00:50:21 CET" finished-at="2019-11-27T00:50:33 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- test.TestContentMenuAccommodation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
