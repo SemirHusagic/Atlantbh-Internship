@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="test.TestSocialFacebookIcon"/>
+      <class name="test.TestCommentSuggestionFesture"/>
+      <class name="test.TestZoomFeature"/>
+      <class name="test.TestLanguageFromEngToBs"/>
+      <class name="test.TestCreateObjectFeature"/>
+      <class name="test.TestSuggestionFesture"/>
+      <class name="test.TestContentMenuArt"/>
+      <class name="test.TestContentMenuAccommodation"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
