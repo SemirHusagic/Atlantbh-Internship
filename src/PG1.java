@@ -22,7 +22,7 @@ public class PG1 {
 	
 	 public static void main(String[] args) throws InterruptedException {
 	        
-		 System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
 	        driver = new ChromeDriver();
 	        driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
 	        
@@ -36,21 +36,13 @@ public class PG1 {
 	        action.moveToElement(createplace);
 	        action.click();
 	        action.perform();
-	        Thread.sleep(2000);
-	        	        
+	        Thread.sleep(2000);	        	        
 	        
 	        //typing the text
 	        WebElement Name = driver.findElement(By.id("poi_name"));
-	        		Name.sendKeys("Milky");
-	        WebElement City = driver.findElement(By.id("poi_city_name"));
-	        		City.sendKeys("Sarajevo");
-	        WebElement zipCode = driver.findElement(By.id("poi_zip_code"));
-	        		zipCode.sendKeys("71000");
-	        WebElement Street = driver.findElement(By.id("poi_place_id"));
-	        		Street.sendKeys("Milana Preloga 10");
+	        		Name.sendKeys("Milky");       
 	        
-	        //add category	 
-	        
+	        //add category
 	        WebElement addcategory = driver.findElement(By.xpath("//button[@class='ember-view btn btn-small']"));	        
 	        action.moveToElement(addcategory).click().perform();
 	        
@@ -69,25 +61,19 @@ public class PG1 {
 	        selectElement2.selectByValue("51");
 	        action.click();
        
-	        //move marker
-	        
-//	        JavascriptExecutor js = (JavascriptExecutor) driver;
-//	        js.executeScript("document.getElementsByClassName('leaflet-marker-icon')[0].style.marginLeft = \"-120px\"");
-	        moveMarkerLeft("120px");    
+	        //move marker     
+		UpdatemoveMarkerLeft("120px");    
       
-	        //scroll down and click on cerate
-	        
+	        //scroll down and click on cerate	        
 	        WebElement createButton = driver.findElement(By.xpath("//button[@class='btn btn-success']"));
 	        WebElement slideBar = driver.findElement(By.xpath("//div[@class='mCSB_dragger']"));
 	        action.clickAndHold(slideBar).moveToElement(createButton).release().build().perform();
 	        action.moveToElement(createButton).click().perform();
 	        
-	        action.pause(java.time.Duration.ofSeconds(15)).perform();
-	        
+	        action.pause(java.time.Duration.ofSeconds(15)).perform();	        
 	        driver.navigate().refresh();
 	        
-	        //search for created object
-	        
+	        //search for created object	        
 	        WebElement Trazi = driver.findElement(By.xpath("//input[@class='ember-view ember-text-field tt-query']"));
 	        action.moveToElement(Trazi).sendKeys("Milky").perform();
 	        WebElement searchButton = driver.findElement(By.xpath("//span[@class='iconav-search']"));
@@ -95,7 +81,10 @@ public class PG1 {
 	        WebElement suggest = driver.findElement(By.xpath("//li[4]"));
 	        action.moveToElement(suggest).click(suggest).perform();  
 	        
-	        		
+	        action.pause(java.time.Duration.ofSeconds(15)).perform();
+	        
+	        //close window	        
+	        driver.close()		
 	       
 	 }	       
 
