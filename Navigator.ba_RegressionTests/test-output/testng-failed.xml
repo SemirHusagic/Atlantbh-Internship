@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.TestSuggestionFesture">
-        <methods>
-          <include name="tearDownTest"/>
-          <include name="OpenPage"/>
-          <include name="SuggestFeature"/>
-        </methods>
-      </class> <!-- test.TestSuggestionFesture -->
       <class name="test.TestCreateObjectFeature">
         <methods>
           <include name="tearDownTest"/>
@@ -17,49 +10,6 @@
           <include name="CreatePlaceTest"/>
         </methods>
       </class> <!-- test.TestCreateObjectFeature -->
-      <class name="test.TestLanguageFromEngToBs">
-        <methods>
-          <include name="ChangeFromEngToBs"/>
-          <include name="tearDownTest"/>
-          <include name="OpenPage"/>
-        </methods>
-      </class> <!-- test.TestLanguageFromEngToBs -->
-      <class name="test.TestContentMenuArt">
-        <methods>
-          <include name="tearDownTest"/>
-          <include name="Accommodation"/>
-          <include name="OpenPage"/>
-        </methods>
-      </class> <!-- test.TestContentMenuArt -->
-      <class name="test.TestContentMenuAccommodation">
-        <methods>
-          <include name="OpenPage"/>
-          <include name="Accommodation"/>
-          <include name="tearDownTest"/>
-        </methods>
-      </class> <!-- test.TestContentMenuAccommodation -->
-      <class name="test.TestCommentSuggestionFesture">
-        <methods>
-          <include name="tearDownTest"/>
-          <include name="SuggestFeature"/>
-          <include name="OpenPage"/>
-        </methods>
-      </class> <!-- test.TestCommentSuggestionFesture -->
-      <class name="test.TestZoomFeature">
-        <methods>
-          <include name="tearDownTest"/>
-          <include name="ZoomInMap"/>
-          <include name="OpenPage"/>
-          <include name="ZoomOutMap"/>
-        </methods>
-      </class> <!-- test.TestZoomFeature -->
-      <class name="test.TestSocialFacebookIcon">
-        <methods>
-          <include name="FacebookIcon"/>
-          <include name="tearDownTest"/>
-          <include name="OpenPage"/>
-        </methods>
-      </class> <!-- test.TestSocialFacebookIcon -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

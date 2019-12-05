@@ -1,47 +1,45 @@
 package test;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import helper.Browser;
+import helper.OpenNavigatorPage;
 import page.ZoomIn_ZoomOut;
 
 
 public class TestZoomFeature {
 	
-public WebDriver driver;
+	private String browser = "chrome";
 	
-	@BeforeTest
+	public WebDriver driver;
+	
+	@BeforeClass
 	public void OpenPage() {	
-	
-		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);      
-		driver.get("http://navigator.ba/#/categories");
-		driver.manage().window().maximize();
+		driver = new Browser().getBrowser(browser);
+		OpenNavigatorPage open = new OpenNavigatorPage(driver);
+		open.OpenPage(browser);
 	}
 	
 	@Test(priority = 0)
 	public void ZoomInMap() {		
+		
 		ZoomIn_ZoomOut zoom = new ZoomIn_ZoomOut(driver);
 		zoom.ZoomIn();		
 	}
 	
 	@Test(priority = 1)
 	public void ZoomOutMap() {		
+		
 		ZoomIn_ZoomOut zoom = new ZoomIn_ZoomOut(driver);
 		zoom.ZoomOut();	
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDownTest() {
-		driver.close();
-		driver.quit();
+		OpenNavigatorPage close = new OpenNavigatorPage(driver);
+		close.ClosePage();
 	}
-
-
 }

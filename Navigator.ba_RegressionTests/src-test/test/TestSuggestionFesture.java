@@ -1,12 +1,12 @@
 package test;
 
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import helper.Browser;
+import helper.OpenNavigatorPage;
 import page.SuggestFeatures;
 
 public class TestSuggestionFesture {
@@ -14,24 +14,21 @@ public class TestSuggestionFesture {
 	private String name = "Muamer";
 	private String email = "asdfg@hotmail.com";
 	private String comment  = "komentar";
+	private String browser = "chrome";
 	
-public WebDriver driver;
+	public WebDriver driver;
 	
-	@BeforeTest
-	public void OpenPage() {	
-		
-		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);      
-	    driver.get("http://navigator.ba/#/categories");
-	    driver.manage().window().maximize();
+	@BeforeClass
+	public void OpenPage() {
+		driver = new Browser().getBrowser(browser);
+		OpenNavigatorPage open = new OpenNavigatorPage(driver);
+		open.OpenPage(browser);
 	}
 
 	@Test
 	public void SuggestFeature() {
 		
-		SuggestFeatures suggest = new SuggestFeatures(driver);
-		
+		SuggestFeatures suggest = new SuggestFeatures(driver);		
 		suggest.opetSuggestFeatures();
 		suggest.enterNameAndSurname(name);
 		suggest.enterEmail(email);
@@ -40,9 +37,9 @@ public WebDriver driver;
 		suggest.clickSendButton();
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDownTest() {
-		driver.close();
-		driver.quit();
+		OpenNavigatorPage close = new OpenNavigatorPage(driver);
+		close.ClosePage();
 	}	
 }

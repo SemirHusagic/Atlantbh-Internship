@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Navigator.ba_RegressionTests/src-config"/>
+	<classpathentry kind="src" path="Navigator.ba_RegressionTests/src-models"/>
+	<classpathentry kind="src" path="Navigator.ba_RegressionTests/src-test"/>
+	<classpathentry kind="src" path="Navigator.ba_SmokeTest/SmokeTest"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.launching.macosx.MacOSXType/Java SE 8 [1.8.0_231]">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/semir/Desktop/Selenium/selenium-server-standalone-4.0.0-alpha-1.jar"/>
+	<classpathentry kind="lib" path="/Users/semir/Desktop/Selenium/selenium-server-standalone-4.0.0-alpha-1.zip"/>
+	<classpathentry kind="lib" path="/Users/semir/Desktop/Atlantbh-Internship/Navigator.ba_RegressionTests/lib/org.testng_7.0.0.r201908191551.jar"/>
+	<classpathentry kind="lib" path="/Users/semir/Desktop/Atlantbh-Internship/Navigator.ba_RegressionTests/lib/org.testng.eclipse_7.0.0.201908240652.jar"/>
+	<classpathentry kind="lib" path="/Users/semir/Desktop/Atlantbh-Internship/Navigator.ba_RegressionTests/lib/org.testng.eclipse.maven_7.0.0.201908240652.jar"/>
+	<classpathentry kind="lib" path="/Users/semir/Desktop/Atlantbh-Internship/Navigator.ba_RegressionTests/lib/org.testng.source_7.0.0.r201908191551.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

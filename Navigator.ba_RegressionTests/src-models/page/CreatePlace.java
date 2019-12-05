@@ -23,6 +23,7 @@ public class CreatePlace {
 	By menu3 = By.xpath("//div[@class='span4']//select");
 	By createbutton = By.xpath("//button[@class='btn btn-success']");
 	By createPlaceSlideBar = By.xpath("//div[@class='mCSB_dragger']");
+	By error_message = By.xpath("//div[@class='row validation-error-msg']");
 	
 	//Constructor
 	public CreatePlace(WebDriver driver1) {
@@ -113,7 +114,10 @@ public class CreatePlace {
 		driver.findElement(createbutton).click();
 	}
 	
-	
+	public String errorMessage() {
+		String message = driver.findElement(error_message).getText();
+		return message;
+	}
 	
 
 }

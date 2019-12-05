@@ -1,28 +1,26 @@
 package test;
 
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import helper.OpenNavigatorPage;
 
+import helper.Browser;
 import page.SuggestFeatures;
 
-public class TestCommentSuggestionFesture {
+ public class TestCommentSuggestionFesture {
 	
 	private String comment = "komentar";
+	private String browser = "chrome";
 	
-public WebDriver driver;
+	public WebDriver driver;
 	
 	@BeforeTest
-	public void OpenPage() {	
-		
-		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);      
-	    driver.get("http://navigator.ba/#/categories");
-	    driver.manage().window().maximize();
+	public void setUp() {	
+		driver = new Browser().getBrowser(browser);
+		OpenNavigatorPage open = new OpenNavigatorPage(driver);
+		open.OpenPage(browser);
 	}
 
 	@Test
@@ -38,7 +36,7 @@ public WebDriver driver;
 	
 	@AfterTest
 	public void tearDownTest() {
-		driver.close();
-		driver.quit();
+		OpenNavigatorPage close = new OpenNavigatorPage(driver);
+		close.ClosePage();
 	}	
 }

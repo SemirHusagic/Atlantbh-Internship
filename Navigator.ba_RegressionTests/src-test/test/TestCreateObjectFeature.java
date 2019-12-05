@@ -1,32 +1,33 @@
 package test;
 
-import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
+import helper.Browser;
+import helper.OpenNavigatorPage;
 import page.CreatePlace;
 
 public class TestCreateObjectFeature {
-	
+		
+	private String browser = "chrome";
 	private String name = "Dell";
 	private String city = "Sarajevo";
 	private String zipcode = "71000";
-	
+	private String expected_error = "Forma sadrži nevalidne podatke. Molimo ispravite i pokušajte ponovo";
 	
 	public WebDriver driver;
 	
-	@BeforeTest
+	@BeforeClass
 	public void OpenPage() {	
-		
-		System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
-		driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);      
-	    driver.get("http://navigator.ba/#/categories");
-	    driver.manage().window().maximize();
-	}
+		driver = new Browser().getBrowser(browser);
+		OpenNavigatorPage open = new OpenNavigatorPage(driver);
+		open.OpenPage(browser);
+}
 	
 	@Test
 	public void CreatePlaceTest() {
@@ -39,14 +40,20 @@ public class TestCreateObjectFeature {
 		place.enterZipCode(zipcode);
 		place.scroolCreatePlaceWindowToBottom();
 		place.clickCreateButton();
+//		SoftAssert softAssert = new SoftAssert();
+		
+		String actual_error = place.errorMessage();	
+//		Assert.assertEquals(actual_error, expected_error, "Error texts are not matching! ");
+		
+//		softAssert.assertEquals(actual_error, expected_error, "Error texts are not matching! ");
+//		String  = driver.findElement(By.xpath("//div[@class='row validation-error-msg']")).getText();
+//		System.out.println(actual_error);
+		Assert.assertEquals(actual_error, expected_error, "Error texts are not matching! ");
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDownTest() {
-		driver.close();
-		driver.quit();
-
-	}	
-	
-	
+		OpenNavigatorPage close = new OpenNavigatorPage(driver);
+		close.ClosePage();
+	}		
 }
