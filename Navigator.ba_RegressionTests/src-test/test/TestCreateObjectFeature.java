@@ -40,15 +40,7 @@ public class TestCreateObjectFeature {
 		place.enterZipCode(zipcode);
 		place.scroolCreatePlaceWindowToBottom();
 		place.clickCreateButton();
-//		SoftAssert softAssert = new SoftAssert();
-		
-		String actual_error = place.errorMessage();	
-//		Assert.assertEquals(actual_error, expected_error, "Error texts are not matching! ");
-		
-//		softAssert.assertEquals(actual_error, expected_error, "Error texts are not matching! ");
-//		String  = driver.findElement(By.xpath("//div[@class='row validation-error-msg']")).getText();
-//		System.out.println(actual_error);
-		Assert.assertEquals(actual_error, expected_error, "Error texts are not matching! ");
+		Assert.assertEquals(place.errorMessage(), expected_error, "Error texts are not matching! ");
 	}
 	
 	@AfterClass

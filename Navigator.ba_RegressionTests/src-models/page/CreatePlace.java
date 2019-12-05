@@ -111,7 +111,9 @@ public class CreatePlace {
 	}
 	
 	public void clickCreateButton() {
-		driver.findElement(createbutton).click();
+		WebElement dugme = driver.findElement(createbutton);
+		Actions action = new Actions(driver);
+		action.moveToElement(dugme).click().perform();
 	}
 	
 	public String errorMessage() {

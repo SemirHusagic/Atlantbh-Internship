@@ -1,8 +1,8 @@
 package test;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import helper.OpenNavigatorPage;
 
@@ -16,7 +16,7 @@ import page.SuggestFeatures;
 	
 	public WebDriver driver;
 	
-	@BeforeTest
+	@BeforeClass
 	public void setUp() {	
 		driver = new Browser().getBrowser(browser);
 		OpenNavigatorPage open = new OpenNavigatorPage(driver);
@@ -34,7 +34,7 @@ import page.SuggestFeatures;
 		suggest.clickSendButton();
 	}
 	
-	@AfterTest
+	@AfterClass
 	public void tearDownTest() {
 		OpenNavigatorPage close = new OpenNavigatorPage(driver);
 		close.ClosePage();
