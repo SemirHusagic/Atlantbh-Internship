@@ -16,6 +16,7 @@ public class SuggestFeatures {
 	By redcheck = By.className("red");
 	By sendbutton = By.xpath("//input[@class='btn green-button']");
 	By canclebutton = By.className("btn grey-button");
+	By alert = By.xpath("//div[@class='alert alert-success']");
 		
 	//Constructor
 	public SuggestFeatures(WebDriver driver) {
@@ -45,5 +46,9 @@ public class SuggestFeatures {
 	}
 	public void clickCancleButton() {
 		driver.findElement(canclebutton).click();
+	}
+	public String successMessage() {
+		String message = driver.findElement(alert).getText();
+		return message;
 	}
 }

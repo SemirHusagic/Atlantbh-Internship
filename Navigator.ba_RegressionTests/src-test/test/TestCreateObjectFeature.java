@@ -1,13 +1,10 @@
 package test;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
-
 import helper.Browser;
 import helper.OpenNavigatorPage;
 import page.CreatePlace;
@@ -19,6 +16,7 @@ public class TestCreateObjectFeature {
 	private String city = "Sarajevo";
 	private String zipcode = "71000";
 	private String expected_error = "Forma sadrži nevalidne podatke. Molimo ispravite i pokušajte ponovo";
+	private String error_message = "Error texts are not matching! ";
 	
 	public WebDriver driver;
 	
@@ -40,7 +38,7 @@ public class TestCreateObjectFeature {
 		place.enterZipCode(zipcode);
 		place.scroolCreatePlaceWindowToBottom();
 		place.clickCreateButton();
-		Assert.assertEquals(place.errorMessage(), expected_error, "Error texts are not matching! ");
+		Assert.assertEquals(place.errorMessage(), expected_error, error_message);
 	}
 	
 	@AfterClass

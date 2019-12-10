@@ -9,6 +9,7 @@ public class ChangeLanguage {
 	
 	By eng = By.xpath("//a[@class='btn-en gaEvent']");
 	By bs = By.xpath("//a[@class='btn-bs gaEvent']");
+	By detect_eng = By.xpath("//ul[@class='navigation left']//li[2]");
 	
 	
 	public ChangeLanguage(WebDriver driver) {
@@ -22,7 +23,10 @@ public class ChangeLanguage {
 	public void changeToBs() {
 		driver.findElement(bs).click();
 	}
-
+	public String confirmChange() {
+		String titleOnEng = driver.findElement(detect_eng).getText();
+		return titleOnEng;
+	}
 	
 	
 }

@@ -1,6 +1,7 @@
 package test;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -12,6 +13,7 @@ import page.ChangeLanguage;
 public class TestLanguageFromEngToBs {
 	
 	private String browser = "chrome";
+	private String engTitle = "Suggest features";
 	
 	public WebDriver driver;
 	
@@ -27,6 +29,7 @@ public class TestLanguageFromEngToBs {
 		
 		ChangeLanguage lng = new ChangeLanguage(driver);
 		lng.changeToEng();
+		Assert.assertTrue(lng.confirmChange().contains(engTitle));
 	}
 	
 	@AfterClass

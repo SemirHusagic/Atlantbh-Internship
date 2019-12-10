@@ -1,6 +1,7 @@
 package test;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -12,6 +13,7 @@ import page.SearchOption;
 public class TestContentMenuAccommodation {
 	
 	private String browser = "chrome";
+	private String placeName = "Plavi";
 	
 	public WebDriver driver;
 	
@@ -27,6 +29,7 @@ public class TestContentMenuAccommodation {
 		
 		SearchOption search = new SearchOption(driver);
 		search.openAccommodation();
+		Assert.assertTrue(search.confirmPlaceName().contains(placeName));
 	}	
 	
 	@AfterClass

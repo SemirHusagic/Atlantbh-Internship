@@ -25,4 +25,8 @@ public class SocialBar {
 	public void openGooglePlus() {
 		driver.findElement(googleplus).click();
 	}
+	public String navigatorFacebookTitle() {
+		String title = driver.getTitle();
+		return title;
+	}
 }

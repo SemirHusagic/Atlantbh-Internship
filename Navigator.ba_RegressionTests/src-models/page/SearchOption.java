@@ -28,6 +28,7 @@ public class SearchOption {
 	By business = By.xpath("//li[@class='business']//div[@class='content']");
 	By street = By.xpath("//li[@class='street']//div[@class='content']");
 	By slidebar = By.xpath("//div[@class='mCSB_dragger']");
+	By artName = By.xpath("//p[contains(text(),'PS4 klub ArenA Vas poziva da zaigrate najnovije ig')]");
 	
 	public SearchOption(WebDriver driver) {
 		this.driver = driver;
@@ -51,7 +52,14 @@ public class SearchOption {
 		WebElement hotel = driver.findElement(club);
 		action.moveToElement(hotel).click().perform();
 	}
-	
+	public String confirmPlaceName() {
+		String placeName = driver.findElement(place).getText();
+		return placeName;
+	}
+	public String confirmArtName() {
+		String artTitle = driver.findElement(artName).getText();
+		return artTitle;
+	}
 	
 	
 }

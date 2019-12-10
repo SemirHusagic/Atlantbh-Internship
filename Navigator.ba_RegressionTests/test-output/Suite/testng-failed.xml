@@ -10,6 +10,20 @@
           <include name="CreatePlaceTest"/>
         </methods>
       </class> <!-- test.TestCreateObjectFeature -->
+      <class name="test.TestSocialFacebookIcon">
+        <methods>
+          <include name="FacebookIcon"/>
+          <include name="tearDownTest"/>
+          <include name="OpenPage"/>
+        </methods>
+      </class> <!-- test.TestSocialFacebookIcon -->
+      <class name="test.TestSuggestionFesture">
+        <methods>
+          <include name="tearDownTest"/>
+          <include name="OpenPage"/>
+          <include name="SuggestFeature"/>
+        </methods>
+      </class> <!-- test.TestSuggestionFesture -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test.TestCreateObjectFeature">
+      <class name="test.TestSuggestionFesture">
         <methods>
           <include name="tearDownTest"/>
           <include name="OpenPage"/>
-          <include name="CreatePlaceTest"/>
+          <include name="SuggestFeature"/>
         </methods>
-      </class> <!-- test.TestCreateObjectFeature -->
+      </class> <!-- test.TestSuggestionFesture -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -2,122 +2,122 @@
 <testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="39721" started-at="2019-12-05T22:34:57 CET" finished-at="2019-12-05T22:35:37 CET">
+  <suite name="Suite" duration-ms="48887" started-at="2019-12-10T16:56:20 CET" finished-at="2019-12-10T16:57:09 CET">
     <groups>
     </groups>
-    <test name="Test" duration-ms="39721" started-at="2019-12-05T22:34:57 CET" finished-at="2019-12-05T22:35:37 CET">
-      <class name="test.TestLanguageFromEngToBs">
-        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestLanguageFromEngToBs@67784306]" name="OpenPage" is-config="true" duration-ms="3820" started-at="2019-12-05T22:35:11 CET" finished-at="2019-12-05T22:35:15 CET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- OpenPage -->
-        <test-method status="PASS" signature="ChangeFromEngToBs()[pri:0, instance:test.TestLanguageFromEngToBs@67784306]" name="ChangeFromEngToBs" duration-ms="1439" started-at="2019-12-05T22:35:15 CET" finished-at="2019-12-05T22:35:16 CET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ChangeFromEngToBs -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestLanguageFromEngToBs@67784306]" name="tearDownTest" is-config="true" duration-ms="189" started-at="2019-12-05T22:35:16 CET" finished-at="2019-12-05T22:35:16 CET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDownTest -->
-      </class> <!-- test.TestLanguageFromEngToBs -->
+    <test name="Test" duration-ms="48887" started-at="2019-12-10T16:56:20 CET" finished-at="2019-12-10T16:57:09 CET">
       <class name="test.TestZoomFeature">
-        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestZoomFeature@185d8b6]" name="OpenPage" is-config="true" duration-ms="3855" started-at="2019-12-05T22:35:07 CET" finished-at="2019-12-05T22:35:11 CET">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestZoomFeature@185d8b6]" name="OpenPage" is-config="true" duration-ms="5413" started-at="2019-12-10T16:56:31 CET" finished-at="2019-12-10T16:56:37 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenPage -->
-        <test-method status="PASS" signature="ZoomInMap()[pri:0, instance:test.TestZoomFeature@185d8b6]" name="ZoomInMap" duration-ms="31" started-at="2019-12-05T22:35:11 CET" finished-at="2019-12-05T22:35:11 CET">
+        <test-method status="PASS" signature="ZoomInMap()[pri:0, instance:test.TestZoomFeature@185d8b6]" name="ZoomInMap" duration-ms="25" started-at="2019-12-10T16:56:37 CET" finished-at="2019-12-10T16:56:37 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ZoomInMap -->
-        <test-method status="PASS" signature="ZoomOutMap()[pri:1, instance:test.TestZoomFeature@185d8b6]" name="ZoomOutMap" duration-ms="16" started-at="2019-12-05T22:35:11 CET" finished-at="2019-12-05T22:35:11 CET">
+        <test-method status="PASS" signature="ZoomOutMap()[pri:1, instance:test.TestZoomFeature@185d8b6]" name="ZoomOutMap" duration-ms="17" started-at="2019-12-10T16:56:37 CET" finished-at="2019-12-10T16:56:37 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ZoomOutMap -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestZoomFeature@185d8b6]" name="tearDownTest" is-config="true" duration-ms="172" started-at="2019-12-05T22:35:11 CET" finished-at="2019-12-05T22:35:11 CET">
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestZoomFeature@185d8b6]" name="tearDownTest" is-config="true" duration-ms="194" started-at="2019-12-10T16:56:37 CET" finished-at="2019-12-10T16:56:37 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
       </class> <!-- test.TestZoomFeature -->
       <class name="test.TestCreateObjectFeature">
-        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestCreateObjectFeature@335eadca]" name="OpenPage" is-config="true" duration-ms="5050" started-at="2019-12-05T22:35:16 CET" finished-at="2019-12-05T22:35:21 CET">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestCreateObjectFeature@335eadca]" name="OpenPage" is-config="true" duration-ms="4985" started-at="2019-12-10T16:56:44 CET" finished-at="2019-12-10T16:56:49 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenPage -->
-        <test-method status="PASS" signature="CreatePlaceTest()[pri:0, instance:test.TestCreateObjectFeature@335eadca]" name="CreatePlaceTest" duration-ms="1274" started-at="2019-12-05T22:35:21 CET" finished-at="2019-12-05T22:35:23 CET">
+        <test-method status="PASS" signature="CreatePlaceTest()[pri:0, instance:test.TestCreateObjectFeature@335eadca]" name="CreatePlaceTest" duration-ms="1203" started-at="2019-12-10T16:56:49 CET" finished-at="2019-12-10T16:56:50 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreatePlaceTest -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestCreateObjectFeature@335eadca]" name="tearDownTest" is-config="true" duration-ms="189" started-at="2019-12-05T22:35:23 CET" finished-at="2019-12-05T22:35:23 CET">
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestCreateObjectFeature@335eadca]" name="tearDownTest" is-config="true" duration-ms="192" started-at="2019-12-10T16:56:50 CET" finished-at="2019-12-10T16:56:50 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
       </class> <!-- test.TestCreateObjectFeature -->
-      <class name="test.TestSocialFacebookIcon">
-        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestSocialFacebookIcon@6c3708b3]" name="OpenPage" is-config="true" duration-ms="4168" started-at="2019-12-05T22:34:57 CET" finished-at="2019-12-05T22:35:01 CET">
+      <class name="test.TestLanguageFromEngToBs">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestLanguageFromEngToBs@67784306]" name="OpenPage" is-config="true" duration-ms="5095" started-at="2019-12-10T16:56:37 CET" finished-at="2019-12-10T16:56:42 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenPage -->
-        <test-method status="PASS" signature="FacebookIcon()[pri:0, instance:test.TestSocialFacebookIcon@6c3708b3]" name="FacebookIcon" duration-ms="138" started-at="2019-12-05T22:35:02 CET" finished-at="2019-12-05T22:35:02 CET">
+        <test-method status="PASS" signature="ChangeFromEngToBs()[pri:0, instance:test.TestLanguageFromEngToBs@67784306]" name="ChangeFromEngToBs" duration-ms="1362" started-at="2019-12-10T16:56:42 CET" finished-at="2019-12-10T16:56:44 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ChangeFromEngToBs -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestLanguageFromEngToBs@67784306]" name="tearDownTest" is-config="true" duration-ms="184" started-at="2019-12-10T16:56:44 CET" finished-at="2019-12-10T16:56:44 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- test.TestLanguageFromEngToBs -->
+      <class name="test.TestSocialFacebookIcon">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestSocialFacebookIcon@6c3708b3]" name="OpenPage" is-config="true" duration-ms="4966" started-at="2019-12-10T16:56:20 CET" finished-at="2019-12-10T16:56:25 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- OpenPage -->
+        <test-method status="PASS" signature="FacebookIcon()[pri:0, instance:test.TestSocialFacebookIcon@6c3708b3]" name="FacebookIcon" duration-ms="196" started-at="2019-12-10T16:56:25 CET" finished-at="2019-12-10T16:56:25 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- FacebookIcon -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestSocialFacebookIcon@6c3708b3]" name="tearDownTest" is-config="true" duration-ms="166" started-at="2019-12-05T22:35:02 CET" finished-at="2019-12-05T22:35:02 CET">
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestSocialFacebookIcon@6c3708b3]" name="tearDownTest" is-config="true" duration-ms="169" started-at="2019-12-10T16:56:25 CET" finished-at="2019-12-10T16:56:26 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
       </class> <!-- test.TestSocialFacebookIcon -->
       <class name="test.TestCommentSuggestionFesture">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:test.TestCommentSuggestionFesture@6f1fba17]" name="setUp" is-config="true" duration-ms="3999" started-at="2019-12-05T22:35:02 CET" finished-at="2019-12-05T22:35:06 CET">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:test.TestCommentSuggestionFesture@6f1fba17]" name="setUp" is-config="true" duration-ms="4241" started-at="2019-12-10T16:56:26 CET" finished-at="2019-12-10T16:56:30 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="SuggestFeature()[pri:0, instance:test.TestCommentSuggestionFesture@6f1fba17]" name="SuggestFeature" duration-ms="668" started-at="2019-12-05T22:35:06 CET" finished-at="2019-12-05T22:35:06 CET">
+        <test-method status="PASS" signature="SuggestFeature()[pri:0, instance:test.TestCommentSuggestionFesture@6f1fba17]" name="SuggestFeature" duration-ms="1506" started-at="2019-12-10T16:56:30 CET" finished-at="2019-12-10T16:56:31 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SuggestFeature -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestCommentSuggestionFesture@6f1fba17]" name="tearDownTest" is-config="true" duration-ms="199" started-at="2019-12-05T22:35:06 CET" finished-at="2019-12-05T22:35:07 CET">
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestCommentSuggestionFesture@6f1fba17]" name="tearDownTest" is-config="true" duration-ms="213" started-at="2019-12-10T16:56:31 CET" finished-at="2019-12-10T16:56:31 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
       </class> <!-- test.TestCommentSuggestionFesture -->
       <class name="test.TestSuggestionFesture">
-        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestSuggestionFesture@210366b4]" name="OpenPage" is-config="true" duration-ms="3171" started-at="2019-12-05T22:35:23 CET" finished-at="2019-12-05T22:35:26 CET">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestSuggestionFesture@210366b4]" name="OpenPage" is-config="true" duration-ms="4807" started-at="2019-12-10T16:56:50 CET" finished-at="2019-12-10T16:56:55 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenPage -->
-        <test-method status="PASS" signature="SuggestFeature()[pri:0, instance:test.TestSuggestionFesture@210366b4]" name="SuggestFeature" duration-ms="869" started-at="2019-12-05T22:35:26 CET" finished-at="2019-12-05T22:35:27 CET">
+        <test-method status="PASS" signature="SuggestFeature()[pri:0, instance:test.TestSuggestionFesture@210366b4]" name="SuggestFeature" duration-ms="1542" started-at="2019-12-10T16:56:55 CET" finished-at="2019-12-10T16:56:57 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SuggestFeature -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestSuggestionFesture@210366b4]" name="tearDownTest" is-config="true" duration-ms="204" started-at="2019-12-05T22:35:27 CET" finished-at="2019-12-05T22:35:27 CET">
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestSuggestionFesture@210366b4]" name="tearDownTest" is-config="true" duration-ms="184" started-at="2019-12-10T16:56:57 CET" finished-at="2019-12-10T16:56:57 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
       </class> <!-- test.TestSuggestionFesture -->
       <class name="test.TestContentMenuArt">
-        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestContentMenuArt@eec5a4a]" name="OpenPage" is-config="true" duration-ms="3873" started-at="2019-12-05T22:35:27 CET" finished-at="2019-12-05T22:35:31 CET">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestContentMenuArt@eec5a4a]" name="OpenPage" is-config="true" duration-ms="5125" started-at="2019-12-10T16:56:57 CET" finished-at="2019-12-10T16:57:02 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenPage -->
-        <test-method status="PASS" signature="Accommodation()[pri:0, instance:test.TestContentMenuArt@eec5a4a]" name="Accommodation" duration-ms="1276" started-at="2019-12-05T22:35:31 CET" finished-at="2019-12-05T22:35:32 CET">
+        <test-method status="PASS" signature="Accommodation()[pri:0, instance:test.TestContentMenuArt@eec5a4a]" name="Accommodation" duration-ms="1688" started-at="2019-12-10T16:57:02 CET" finished-at="2019-12-10T16:57:04 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Accommodation -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestContentMenuArt@eec5a4a]" name="tearDownTest" is-config="true" duration-ms="196" started-at="2019-12-05T22:35:32 CET" finished-at="2019-12-05T22:35:32 CET">
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestContentMenuArt@eec5a4a]" name="tearDownTest" is-config="true" duration-ms="194" started-at="2019-12-10T16:57:04 CET" finished-at="2019-12-10T16:57:04 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
       </class> <!-- test.TestContentMenuArt -->
       <class name="test.TestContentMenuAccommodation">
-        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestContentMenuAccommodation@2b2948e2]" name="OpenPage" is-config="true" duration-ms="3564" started-at="2019-12-05T22:35:32 CET" finished-at="2019-12-05T22:35:36 CET">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestContentMenuAccommodation@2b2948e2]" name="OpenPage" is-config="true" duration-ms="4196" started-at="2019-12-10T16:57:04 CET" finished-at="2019-12-10T16:57:08 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenPage -->
-        <test-method status="PASS" signature="Accommodation()[pri:0, instance:test.TestContentMenuAccommodation@2b2948e2]" name="Accommodation" duration-ms="938" started-at="2019-12-05T22:35:36 CET" finished-at="2019-12-05T22:35:37 CET">
+        <test-method status="PASS" signature="Accommodation()[pri:0, instance:test.TestContentMenuAccommodation@2b2948e2]" name="Accommodation" duration-ms="955" started-at="2019-12-10T16:57:08 CET" finished-at="2019-12-10T16:57:09 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Accommodation -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestContentMenuAccommodation@2b2948e2]" name="tearDownTest" is-config="true" duration-ms="207" started-at="2019-12-05T22:35:37 CET" finished-at="2019-12-05T22:35:37 CET">
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.TestContentMenuAccommodation@2b2948e2]" name="tearDownTest" is-config="true" duration-ms="183" started-at="2019-12-10T16:57:09 CET" finished-at="2019-12-10T16:57:09 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
