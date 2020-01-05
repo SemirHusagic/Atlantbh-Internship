@@ -3,13 +3,27 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="test.TestCommentSuggestionFesture">
+      <class name="test.TestCreateObjectFeature">
         <methods>
           <include name="tearDownTest"/>
-          <include name="SuggestFeature"/>
-          <include name="setUp"/>
+          <include name="OpenPage"/>
+          <include name="CreatePlaceTest"/>
         </methods>
-      </class> <!-- test.TestCommentSuggestionFesture -->
+      </class> <!-- test.TestCreateObjectFeature -->
+      <class name="test.TestSocialFacebookIcon">
+        <methods>
+          <include name="FacebookIcon"/>
+          <include name="tearDownTest"/>
+          <include name="OpenPage"/>
+        </methods>
+      </class> <!-- test.TestSocialFacebookIcon -->
+      <class name="test.TestSuggestionFesture">
+        <methods>
+          <include name="tearDownTest"/>
+          <include name="OpenPage"/>
+          <include name="SuggestFeature"/>
+        </methods>
+      </class> <!-- test.TestSuggestionFesture -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
