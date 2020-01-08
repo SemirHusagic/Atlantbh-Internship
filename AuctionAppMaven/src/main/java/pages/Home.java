@@ -14,7 +14,7 @@ public class Home {
 	
 	public WebDriver driver;
 	
-	By bidNowButton = By.xpath("//a[contains(text(),'bid now')]");
+	By bidNowButton = By.xpath("/html[1]/body[1]/app-root[1]/app-landing-page[1]/section[1]/div[1]/div[1]/app-carousel[1]/div[1]/div[1]/div[1]/a[1]");
 	By homeText = By.xpath("//a[contains(text(),'my account')]");
 	By homeButton = By.xpath("//a[contains(text(),'home')]");
 	By openShop = By.xpath("//a[contains(text(),'shop')]");
