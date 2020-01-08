@@ -1,10 +1,9 @@
 package test;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
 import helper.Browser;
 import helper.AuctionPage;
@@ -15,12 +14,12 @@ import pages.Shop;
 public class TestSortingProducts {
 	
 	private String browser = "chrome";
-	private String email = "mail@email.com";
-	private String password = "Aaaaaaa1!";
+	private String email = "sema1@gmail.com";
+	private String password = "!Qq123";
 	
 	public WebDriver driver;
 	
-	@BeforeSuite
+	@BeforeClass
 	public void OpenPage() {		
 		driver = new Browser().getBrowser(browser);
 		AuctionPage page = new AuctionPage(driver);
@@ -72,7 +71,7 @@ public class TestSortingProducts {
 		shop.verifyTimeSorting();
 	}
 	
-	@AfterSuite
+	@AfterClass
 	public void closeTest() {
 		AuctionPage close = new AuctionPage(driver);
 		close.ClosePage();

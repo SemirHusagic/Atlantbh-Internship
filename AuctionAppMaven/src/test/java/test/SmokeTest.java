@@ -14,8 +14,8 @@ import pages.SingleProduct;
 public class SmokeTest {
 	
 	private String browser = "chrome";
-	private String email = "mail@email.com";
-	private String password = "Aaaaaaa1!";
+	private String email = "sema1@gmail.com";
+	private String password = "!Qq123";
 	private String bidValue;
 	
 	public WebDriver driver;
@@ -33,6 +33,7 @@ public class SmokeTest {
 		Login login = new Login(driver);		
 		login.openLogin();
 		login.loginTitle();
+		login.scroolToLogin();
 		login.enterEmail(email);
 		login.enterPassword(password);
 		login.clickLogin();

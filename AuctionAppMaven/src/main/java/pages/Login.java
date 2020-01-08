@@ -1,7 +1,10 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
 public class Login {
@@ -39,6 +42,22 @@ public class Login {
 	public void loginTitle() {
 		String title = driver.findElement(login_title).getText();
 		Assert.assertTrue(title.contains(title_page), login_message);		
+	}
+	
+	public void scroolToLogin() {		
+		WebElement element = driver.findElement(login_title);
+		scrollTo(element);
+		waitForLoad();
+	}
+	
+	public void waitForLoad() {
+		Actions action = new Actions(driver);
+		action.pause(java.time.Duration.ofSeconds(1)).perform();
+	}
+	
+	public void scrollTo(WebElement element) {		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", element);
 	}
 
 }

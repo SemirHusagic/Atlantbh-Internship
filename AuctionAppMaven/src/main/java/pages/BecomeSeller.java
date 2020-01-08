@@ -41,12 +41,6 @@ public class BecomeSeller {
 	By uploadBox = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-first-step[1]/div[1]/app-upload-images[1]/div[1]/input[1]");
 	By scroolToNextButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-first-step[1]/div[1]/div[4]/p[1]");
 	By nextButton = By.xpath("//div[@class='first-step show']//button[@class='next'][contains(text(),'next')]");
-	
-//	vec ima 				 /html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-first-step[1]/div[1]/div[5]/button[1]
-//							 /html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-first-step[1]/div[1]/div[5]/button[2]
-	//div[@class='first-step show']//button[@class='next'][contains(text(),'next')]
-	//div[@class='first-step show']//button[@class='next'][contains(text(),'next')]
-	
 	By setPricesTitle = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/h3[1]");
 	By productPrice = By.xpath("//input[@placeholder='Enter product price']");
 	By startDate = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-second-step[1]/div[1]/div[2]/app-custom-date-input[1]/div[1]/div[1]/input[1]");
@@ -58,13 +52,13 @@ public class BecomeSeller {
 	By city = By.xpath("//input[@id='city']");
 	By zipcode = By.xpath("//input[@id='zip']");
 	By phone = By.xpath("//input[@id='phone']");
-	By cardInformationTitle= By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-last-step[1]/div[1]/div[4]/h3[1]");
+	By cardInformationTitle= By.xpath("//h3[contains(text(),'Card Information')]");
 	By cardName = By.xpath("//input[@id='cName']");
 	By cardNumber = By.xpath("//input[@id='cNumber']");
 	By cardYearExpiration = By.xpath("//app-last-step//app-select-input[1]//div[1]//div[1]//p[1]");
 	By cardMonthExpiration = By.xpath("//app-last-step//app-select-input[2]//div[1]//div[1]//p[1]");
 	By cvc = By.xpath("//input[@id='cvc']");
-	By doneButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-last-step[1]/div[1]/div[5]/button[2]");
+	By doneButton = By.xpath("//button[@class='done']");
 //	By = By.xpath("");
 //	By = By.xpath("");
 //	By = By.xpath("");
@@ -189,7 +183,7 @@ public class BecomeSeller {
 		driver.findElement(cardYearExpiration).click();
 		driver.findElement(By.xpath("//li[contains(text(),'" + Year + "')]")).click();
 		driver.findElement(cardMonthExpiration).click();
-		driver.findElement(By.xpath("//html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-last-step[1]/div[1]/div[4]/div[2]/div[1]/div[1]/app-select-input[2]/div[1]/div[1]/ul[1]/li[" + Month + "]")).click();
+		driver.findElement(By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-last-step[1]/div[1]/div[6]/div[2]/div[1]/div[1]/app-select-input[2]/div[1]/div[1]/ul[1]/li["+ Month +"]")).click();
 	}
 	
 	public void enterCVC(String CVC) {		

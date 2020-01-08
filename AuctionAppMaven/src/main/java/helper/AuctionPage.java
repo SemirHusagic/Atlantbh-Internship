@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 
 public class AuctionPage {
-	
+		
 	public WebDriver driver;
 	
 	public AuctionPage(WebDriver driver) {

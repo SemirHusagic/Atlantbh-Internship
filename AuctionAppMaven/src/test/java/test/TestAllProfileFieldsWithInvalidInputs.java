@@ -1,10 +1,10 @@
 package test;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
 import helper.AuctionPage;
 import helper.Browser;
@@ -15,29 +15,29 @@ import pages.MyAccountProfile;
 public class TestAllProfileFieldsWithInvalidInputs {
 	
 	private String browser = "chrome";
-	private String email = "qaTest@email.com";
-	private String password = "Aaaaaaa1!";
+	private String email = "sema50@gmail.com";
+	private String password = "!Qq123";
 	
-	private String firstName = "a";
-	private String lastName = "a";
+//	private String firstName = "a";
+//	private String lastName = "a";
 	
 	//enter phone number in format e.g. +38761222333
 	private String phoneNumber = "a";
 	private String newEmail = "f";
-	private String cardNumber = "a";
+//	private String cardNumber = "a";
 	
-	private String cardCVC = "1";
+//	private String cardCVC = "1";
 	
 	public WebDriver driver;
 	
-	@BeforeSuite
+	@BeforeClass
 	public void OpenPage() {		
 		driver = new Browser().getBrowser(browser); 
 		AuctionPage page = new AuctionPage(driver);
 		page.OpenPage();
 	}
 	
-	@BeforeClass
+	@BeforeMethod
 	public void UserLogin() {		
 		Login login = new Login(driver);
 		Home home = new Home(driver);
@@ -121,12 +121,12 @@ public class TestAllProfileFieldsWithInvalidInputs {
 ////		account.saveButtonAsster();
 //	}
 
-//	@AfterSuite
-//	public void Close() {
-//		AuctionPage page = new AuctionPage(driver);
-//		page.ClosePage();
-//		
-//	}
+	@AfterClass
+	public void Close() {
+		AuctionPage page = new AuctionPage(driver);
+		page.ClosePage();
+		
+	}
 
 }
 

@@ -1,10 +1,10 @@
 package test;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
 import helper.Browser;
 import helper.AuctionPage;
@@ -15,8 +15,8 @@ import pages.MyAccountProfile;
 public class TestAllProfileFields {
 	
 	private String browser = "chrome";
-	private String email = "qaTest@email.com";
-	private String password = "Aaaaaaa1!";
+	private String email = "sema50@gmail.com";
+	private String password = "!Qq123";
 	private String firstName = "Arnold";
 	private String lastName = "Smith";
 	private String gender = "Male";	
@@ -40,14 +40,14 @@ public class TestAllProfileFields {
 	
 	public WebDriver driver;
 	
-	@BeforeSuite
+	@BeforeClass
 	public void OpenPage() {		
 		driver = new Browser().getBrowser(browser); 
 		AuctionPage page = new AuctionPage(driver);
 		page.OpenPage();
 	}
 	
-	@BeforeClass
+	@BeforeMethod
 	public void UserLogin() {		
 		Login login = new Login(driver);
 		Home home = new Home(driver);
@@ -101,7 +101,7 @@ public class TestAllProfileFields {
 		account.saveButtonAsster();
 	}
 
-	@AfterSuite
+	@AfterClass
 	public void Close() {
 		AuctionPage page = new AuctionPage(driver);
 		page.ClosePage();

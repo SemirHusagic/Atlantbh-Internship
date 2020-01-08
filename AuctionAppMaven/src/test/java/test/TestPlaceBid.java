@@ -1,10 +1,10 @@
 package test;
 
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeSuite;
 
 import helper.Browser;
 import helper.AuctionPage;
@@ -15,21 +15,21 @@ import pages.SingleProduct;
 public class TestPlaceBid {
 	
 	private String browser = "chrome";
-	private String email = "mail@email.com";
-	private String password = "Aaaaaaa1!";	
+	private String email = "sema49@gmail.com";
+	private String password = "!Qq123";	
 	private String bidValue;
 	
 	public WebDriver driver;
 
 	
-	@BeforeSuite
+	@BeforeClass
 	public void OpenPage() {
 		driver = new Browser().getBrowser(browser);
 		AuctionPage open = new AuctionPage(driver);
 		open.OpenPage();
 	}
 	
-	@BeforeClass
+	@BeforeMethod
 	public void UserLogin() {
 		
 		Login login = new Login(driver);
@@ -132,7 +132,7 @@ public class TestPlaceBid {
 		product.sendAssert();
 		product.waitToLoad();		
 	}
-	@AfterSuite
+	@AfterClass
 	public void closeTest() {
 		//Close the page
 		AuctionPage close = new AuctionPage(driver);

@@ -5,8 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -15,7 +13,7 @@ public class Seller {
 	By sellerButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/ul[1]/li[2]/a[1]");
 	By activeProductButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-seller[1]/section[1]/ul[1]/li[1]/p[1]");
 	By soldProductButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-seller[1]/section[1]/ul[1]/li[2]/p[1]");
-//	By = By.xpath("");
+	By productName = By.xpath("/html[1]/body[1]/app-root[1]/app-product-page[1]/section[1]/div[1]/h2[1]");
 //	By = By.xpath("");
 //	By = By.xpath("");
 //	By = By.xpath("");
@@ -33,9 +31,6 @@ public class Seller {
 	
 	public void clickSeller() {
 		driver.findElement(sellerButton).click();
-//		WebElement button = driver.findElement(sellerButton);
-//		WebDriverWait wait = new WebDriverWait(driver, 1);
-//        wait.until(ExpectedConditions.elementToBeClickable(button));
 	}
 	
 	public void findProduct(String product) {
@@ -44,10 +39,8 @@ public class Seller {
 		waitForLoad();
 		
 	}
-	//ako proizvod XY odgovara tom redu onda klikni na element view
-	//ako ime proizvoda XY odgovara stringu XY
 	
-	public void selectRow(String productName) {
+	public void selectProductAndClickView(String productName) {
 		List<WebElement> rows = driver.findElements(By.xpath("//body//tbody//tr"));
 		
 		for(int i=1; i<=rows.size(); i++) {
@@ -61,44 +54,14 @@ public class Seller {
 			}
 				
 		}
+	}	
+	public String verifyProductAuction() {
+		String nameOfProduct = driver.findElement(productName).getText();
+		return nameOfProduct;
 	}
 	
 	
-//	public String rowNo(String value)
-//	{
-//	   WebElement table =driver.findElement(By.id("tableId"));
-//	   WebElement tbody=table.findElement(By.tagName("tbody"));
-//	   List<WebElement> rows=tbody.findElements(By.tagName("tr"));
-//	   ArrayList<String> ListOdIds=new ArrayList<>();
-//	   String rowNo="";
-//	   for(int i=0;i<rows.size();i++)
-//	   {
-//	     WebElement row = tbody.findElement(By.xpath("//table[@id='tableId']/tbody/tr["+(i+1)+"]"));
-//	     if(row.getText().trim().contains(value))
-//	     {
-//	        rowNo=Integer.toString(i+1); 
-//	            break;
-//	     }
-//
-//	   }
-//
-//	   return rowNo;
-//	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	public void scrollToCardInformation() {
+	public void scrollActiveProducts() {
 		WebElement element = driver.findElement(activeProductButton);
 		scrollTo(element);
 		waitForLoad();

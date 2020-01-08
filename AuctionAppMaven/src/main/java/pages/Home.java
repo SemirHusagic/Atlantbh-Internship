@@ -41,7 +41,7 @@ public class Home {
 	
 	public void waitForLoad() {
 		Actions action = new Actions(driver);
-		action.pause(java.time.Duration.ofSeconds(2)).perform();
+		action.pause(java.time.Duration.ofSeconds(3)).perform();
 	}
 	
 	public void homePageTitle() {
