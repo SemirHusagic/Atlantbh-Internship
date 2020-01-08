@@ -52,7 +52,7 @@ public class SmokeTest {
 		home.waitForLoad();
 		
 		//Confirm that page is loaded
-		home.homePageTitle();
+//		home.homePageTitle();
 		
 		//Access random item and wait page to load
 		home.clickBidNow();

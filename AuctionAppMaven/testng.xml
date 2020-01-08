@@ -5,64 +5,57 @@
 	<!-- <packages> -->
 	<!-- <package name="test/> -->
 	<!-- </packages> -->
-	
-<test thread-count="5" name="Test1">  
-    <classes>
-      <class 
-      	name="test.SmokeTest"/>
-    </classes>
- </test>
   
- <test thread-count="5" name="Test2">  
+ <test thread-count="5" name="Test1">  
     <classes>
       <class 
       	name="test.TestCreateAccount"/>
     </classes>
  </test>
  
- <test thread-count="5" name="Test3">  
+ <test thread-count="5" name="Test2">  
     <classes>
       <class 
       	name="test.TestPlaceBid"/>
     </classes>
  </test>
  
- <test thread-count="5" name="Test4">  
+ <test thread-count="5" name="Test3">  
     <classes>
       <class 
       	name="test.TestSortingProducts"/>
     </classes>
  </test>
  
- <test thread-count="5" name="Test5">  
+ <test thread-count="5" name="Test4">  
     <classes>
       <class 
       	name="test.TestRequiredProfileFields"/>
     </classes>
  </test>
  
- <test thread-count="5" name="Test6">  
+ <test thread-count="5" name="Test5">  
     <classes>
       <class 
       	name="test.TestAllProfileFields"/>
     </classes>
  </test>
    
- <test thread-count="5" name="Test7">  
+ <test thread-count="5" name="Test6">  
     <classes>
       <class 
       	name="test.TestAllProfileFieldsWithInvalidInputs"/>
     </classes>
  </test>  
 
- <test thread-count="5" name="Test8">  
+ <test thread-count="5" name="Test7">  
     <classes>
       <class 
       	name="test.TestBecomeSeller"/>
     </classes>
  </test>
 
- <test thread-count="5" name="Test9">  
+ <test thread-count="5" name="Test8">  
     <classes>
       <class 
       	name="test.Register"/>
