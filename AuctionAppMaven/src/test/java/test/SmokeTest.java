@@ -14,7 +14,7 @@ import pages.SingleProduct;
 public class SmokeTest {
 	
 	private String browser = "chrome";
-	private String email = "sema1@gmail.com";
+	private String email = "sema2@gmail.com";
 	private String password = "!Qq123";
 	private String bidValue;
 	
@@ -52,12 +52,12 @@ public class SmokeTest {
 		home.waitForLoad();
 		
 		//Confirm that page is loaded
-//		home.homePageTitle();
+		home.homePageTitle();
 		
 		//Access random item and wait page to load
 		home.clickBidNow();
-		product.waitToLoad();
 		System.out.println("Open product and make bid.");
+		product.waitToLoad();
 		product.getPageTitle();
 		
 		//Determine the bid value to enter
@@ -66,10 +66,11 @@ public class SmokeTest {
 		//If auction is started - place a bid		
 		product.enterBid(bidValue);
 		product.waitToLoad();
+		System.out.println("Placing a bid.");
 		product.clickPlaceBid(bidValue);
 		
 		//Verify that you are the higher bidder
-		product.sendAssert();
+//		product.sendAssert();
 		product.waitToLoad(); 
 		System.out.println("Smoke Test is finished and window is closing up.");
 		

@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="14834" started-at="2020-01-08T19:59:27 CET" finished-at="2020-01-08T19:59:42 CET">
+  <suite name="Default suite" duration-ms="14560" started-at="2020-01-08T20:11:45 CET" finished-at="2020-01-08T20:12:00 CET">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="14834" started-at="2020-01-08T19:59:27 CET" finished-at="2020-01-08T19:59:42 CET">
+    <test name="Default test" duration-ms="14560" started-at="2020-01-08T20:11:45 CET" finished-at="2020-01-08T20:12:00 CET">
       <class name="test.SmokeTest">
-        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.SmokeTest@5d76b067]" name="OpenPage" is-config="true" duration-ms="3599" started-at="2020-01-08T19:59:27 CET" finished-at="2020-01-08T19:59:31 CET">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.SmokeTest@5d76b067]" name="OpenPage" is-config="true" duration-ms="3477" started-at="2020-01-08T20:11:45 CET" finished-at="2020-01-08T20:11:49 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenPage -->
-        <test-method status="PASS" signature="LoginPage()[pri:1, instance:test.SmokeTest@5d76b067]" name="LoginPage" duration-ms="1448" started-at="2020-01-08T19:59:31 CET" finished-at="2020-01-08T19:59:32 CET">
+        <test-method status="PASS" signature="LoginPage()[pri:1, instance:test.SmokeTest@5d76b067]" name="LoginPage" duration-ms="1431" started-at="2020-01-08T20:11:49 CET" finished-at="2020-01-08T20:11:50 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- LoginPage -->
-        <test-method status="PASS" signature="HomePage()[pri:2, instance:test.SmokeTest@5d76b067]" name="HomePage" duration-ms="9634" started-at="2020-01-08T19:59:32 CET" finished-at="2020-01-08T19:59:42 CET">
+        <test-method status="PASS" signature="HomePage()[pri:2, instance:test.SmokeTest@5d76b067]" name="HomePage" duration-ms="9495" started-at="2020-01-08T20:11:50 CET" finished-at="2020-01-08T20:12:00 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomePage -->
-        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.SmokeTest@5d76b067]" name="tearDownTest" is-config="true" duration-ms="120" started-at="2020-01-08T19:59:42 CET" finished-at="2020-01-08T19:59:42 CET">
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.SmokeTest@5d76b067]" name="tearDownTest" is-config="true" duration-ms="127" started-at="2020-01-08T20:12:00 CET" finished-at="2020-01-08T20:12:00 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownTest -->
