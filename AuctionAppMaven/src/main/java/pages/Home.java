@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 
@@ -30,9 +32,13 @@ public class Home {
 	}
 	
 	public void clickBidNow() {
-		WebElement element = driver.findElement(bidNowButton);
-		Actions action = new Actions(driver);
-		action.moveToElement(element).click().perform();
+//		WebElement element = driver.findElement(bidNowButton);
+//		Actions action = new Actions(driver);
+//		action.moveToElement(element).click().perform();
+		
+		WebDriverWait wait = new WebDriverWait(driver, 60); 
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(bidNowButton)); 
+	    driver.findElement(bidNowButton).click();
 	}
 	
 	public void clickOnShopButton() {
