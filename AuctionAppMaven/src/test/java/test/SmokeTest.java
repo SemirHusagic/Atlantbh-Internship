@@ -70,7 +70,7 @@ public class SmokeTest {
 		product.clickPlaceBid(bidValue);
 		
 		//Verify that you are the higher bidder
-//		product.sendAssert();
+		product.sendAssert();
 		product.waitToLoad(); 
 		System.out.println("Smoke Test is finished and window is closing up.");
 		

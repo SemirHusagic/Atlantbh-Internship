@@ -5,7 +5,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class Seller {
@@ -45,16 +47,17 @@ public class Seller {
 		
 		for(int i=1; i<=rows.size(); i++) {
 			String product = driver.findElement(By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-seller[1]/section[1]/app-table[1]/section[1]/table[1]/tbody[1]/tr["+ i +"]/td[2]")).getText();
-			
+
 			if(product.compareTo(productName) == 0) {
 				WebElement element = driver.findElement(By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-seller[1]/section[1]/app-table[1]/section[1]/table[1]/tbody[1]/tr["+ i +"]/td[2]"));
 				scrollToProduct(element);
 				waitForLoad();
 				driver.findElement(By.xpath("//tr["+ i +"]//td[8]//a[1]")).click();
-			}
-				
+				break;
+			}				
 		}
-	}	
+	}
+	
 	public String verifyProductAuction() {
 		String nameOfProduct = driver.findElement(productName).getText();
 		return nameOfProduct;
@@ -66,6 +69,31 @@ public class Seller {
 		scrollTo(element);
 		waitForLoad();
 	}
+	
+	
+	
+	
+	
+//	public void date() {
+//	DateFormat formatdate = new SimpleDateFormat("MM/dd/yyyy");
+//	
+//	Date systemDate = new Date();
+//	
+//	String dateOfSystem =  formatdate.format(systemDate);
+//	System.out.println(dateOfSystem);
+//	
+////	if(dateOfSystem.contains("/")) {
+////		String[] day = dateOfSystem.split("/");
+////		System.out.println(day);
+////	}
+//	
+//	for(String time:dateOfSystem.split("/")){  
+//		String month = time;
+//		String day = time;
+//		String year = time;
+//		System.out.println(month + "-" + day + "-" + year);
+//		}
+//	}
 	
 	public void waitForLoad() {
 		Actions action = new Actions(driver);

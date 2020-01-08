@@ -183,7 +183,8 @@ public class BecomeSeller {
 		driver.findElement(cardYearExpiration).click();
 		driver.findElement(By.xpath("//li[contains(text(),'" + Year + "')]")).click();
 		driver.findElement(cardMonthExpiration).click();
-		driver.findElement(By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-last-step[1]/div[1]/div[6]/div[2]/div[1]/div[1]/app-select-input[2]/div[1]/div[1]/ul[1]/li["+ Month +"]")).click();
+//		driver.findElement(By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-last-step[1]/div[1]/div[6]/div[2]/div[1]/div[1]/app-select-input[2]/div[1]/div[1]/ul[1]/li["+ Month +"]")).click();
+		driver.findElement(By.xpath("//li[contains(text(),'" + Month + "')]")).click();
 	}
 	
 	public void enterCVC(String CVC) {		
