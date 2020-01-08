@@ -2,6 +2,11 @@ package test;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.WebDriver;
 
 import helper.AuctionPage;
@@ -42,5 +47,6 @@ public class Register {
 		account.clickRegisterButton();
 		
 	}
+
 
 }

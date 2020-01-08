@@ -4,6 +4,11 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import org.openqa.selenium.WebDriver;
 import helper.AuctionPage;
 import helper.Browser;
@@ -23,6 +28,15 @@ public class TestBecomeSeller {
 	private String price = "100";
 	private String startDate = "1/9/2020";
 	private String endDate = "1/10/2020";
+	
+//	public void Date() {
+//		DateFormat formatdate = new SimpleDateFormat("MM/dd/yyyy");
+//		
+//		Date systemDate = new Date();
+//		
+//		String dateOfSystem = formatdate.format(systemDate);
+//		System.out.println(dateOfSystem);
+//	}
 	
 	private String address = "2 Starling Hill";
 	private String country = "United States";

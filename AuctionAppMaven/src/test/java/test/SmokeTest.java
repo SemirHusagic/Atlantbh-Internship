@@ -22,6 +22,7 @@ public class SmokeTest {
 	
 	@BeforeClass
 	public void OpenPage() {
+		System.out.println("Started method " + this.getClass().getSimpleName() + ".");
 		driver = new Browser().getBrowser(browser);
 		AuctionPage open = new AuctionPage(driver);
 		open.OpenPage();				
@@ -30,6 +31,7 @@ public class SmokeTest {
 	@Test(priority = 1)
 	public void LoginPage() {
 		//Login and enter home page
+		System.out.println("Enter email, password and login");
 		Login login = new Login(driver);		
 		login.openLogin();
 		login.loginTitle();
@@ -41,10 +43,11 @@ public class SmokeTest {
 	
 	@Test(priority = 2)
 	public void HomePage() {		
-		
+
 		Home home = new Home(driver);
 		SingleProduct product = new SingleProduct(driver);
-		
+
+		System.out.println("Verifying home page is load.");
 		//Wait 3 seconds for page to load
 		home.waitForLoad();
 		
@@ -54,7 +57,7 @@ public class SmokeTest {
 		//Access random item and wait page to load
 		home.clickBidNow();
 		product.waitToLoad();
-		
+		System.out.println("Open product and make bid.");
 		product.getPageTitle();
 		
 		//Determine the bid value to enter
@@ -68,7 +71,7 @@ public class SmokeTest {
 		//Verify that you are the higher bidder
 		product.sendAssert();
 		product.waitToLoad(); 
-		
+		System.out.println("Smoke Test is finished and window is closing up.");
 		
  	}			
 	

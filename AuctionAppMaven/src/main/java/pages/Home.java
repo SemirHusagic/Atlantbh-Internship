@@ -9,13 +9,13 @@ import org.testng.Assert;
 
 public class Home {
 	
-	private String home_page_text = "Categories";
+	private String home_page_text = "MY ACCOUNT";
 	private String home_message = "Home page did not load correctly.";
 	
 	public WebDriver driver;
 	
 	By bidNowButton = By.xpath("//a[contains(text(),'bid now')]");
-	By homeText = By.xpath("//h3[contains(text(),'Categories')]");
+	By homeText = By.xpath("//a[contains(text(),'my account')]");
 	By homeButton = By.xpath("//a[contains(text(),'home')]");
 	By openShop = By.xpath("//a[contains(text(),'shop')]");
 	
