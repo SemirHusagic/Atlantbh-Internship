@@ -241,8 +241,5 @@ public class BecomeSeller {
 	public void waitForLoad() {
 		Actions action = new Actions(driver);
 		action.pause(java.time.Duration.ofSeconds(2)).perform();
-	}
-	
+	}	
 }
-
-
