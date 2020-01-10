@@ -2,32 +2,28 @@
 <testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="36895" started-at="2020-01-08T22:25:05 CET" finished-at="2020-01-08T22:25:42 CET">
+  <suite name="Default suite" duration-ms="14849" started-at="2020-01-10T10:21:11 CET" finished-at="2020-01-10T10:21:26 CET">
     <groups>
     </groups>
-    <test name="TestSmoke" duration-ms="36895" started-at="2020-01-08T22:25:05 CET" finished-at="2020-01-08T22:25:42 CET">
-      <class name="test.TestBecomeSeller">
-        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestBecomeSeller@5d76b067]" name="OpenPage" is-config="true" duration-ms="3431" started-at="2020-01-08T22:25:05 CET" finished-at="2020-01-08T22:25:08 CET">
+    <test name="Default test" duration-ms="14849" started-at="2020-01-10T10:21:11 CET" finished-at="2020-01-10T10:21:26 CET">
+      <class name="test.SmokeTest">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.SmokeTest@5d76b067]" name="OpenPage" is-config="true" duration-ms="3569" started-at="2020-01-10T10:21:11 CET" finished-at="2020-01-10T10:21:15 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenPage -->
-        <test-method status="PASS" signature="UserLogin()[pri:0, instance:test.TestBecomeSeller@5d76b067]" name="UserLogin" is-config="true" duration-ms="3391" started-at="2020-01-08T22:25:08 CET" finished-at="2020-01-08T22:25:12 CET">
+        <test-method status="PASS" signature="LoginPage()[pri:1, instance:test.SmokeTest@5d76b067]" name="LoginPage" duration-ms="1446" started-at="2020-01-10T10:21:15 CET" finished-at="2020-01-10T10:21:16 CET">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- UserLogin -->
-        <test-method status="PASS" signature="StartSellingProduct()[pri:1, instance:test.TestBecomeSeller@5d76b067]" name="StartSellingProduct" duration-ms="21258" started-at="2020-01-08T22:25:12 CET" finished-at="2020-01-08T22:25:33 CET">
+        </test-method> <!-- LoginPage -->
+        <test-method status="PASS" signature="HomePage()[pri:2, instance:test.SmokeTest@5d76b067]" name="HomePage" duration-ms="9677" started-at="2020-01-10T10:21:16 CET" finished-at="2020-01-10T10:21:26 CET">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- StartSellingProduct -->
-        <test-method status="PASS" signature="CheckSetProduct()[pri:2, instance:test.TestBecomeSeller@5d76b067]" name="CheckSetProduct" duration-ms="8662" started-at="2020-01-08T22:25:33 CET" finished-at="2020-01-08T22:25:42 CET">
+        </test-method> <!-- HomePage -->
+        <test-method status="PASS" signature="tearDownTest()[pri:0, instance:test.SmokeTest@5d76b067]" name="tearDownTest" is-config="true" duration-ms="125" started-at="2020-01-10T10:21:26 CET" finished-at="2020-01-10T10:21:26 CET">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- CheckSetProduct -->
-        <test-method status="PASS" signature="Close()[pri:0, instance:test.TestBecomeSeller@5d76b067]" name="Close" is-config="true" duration-ms="119" started-at="2020-01-08T22:25:42 CET" finished-at="2020-01-08T22:25:42 CET">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Close -->
-      </class> <!-- test.TestBecomeSeller -->
-    </test> <!-- TestSmoke -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- tearDownTest -->
+      </class> <!-- test.SmokeTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

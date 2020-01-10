@@ -19,9 +19,7 @@ public class TestBecomeSeller {
 	private String password = "!Qq123";
 	private String productName = "Profile";
 	private String descriptionText = "New product.";
-	private String price = "100";
-	private String startDate = "1/9/2020";
-	private String endDate = "1/10/2020";	
+	private String price = "100";	
 	private String address = "2 Starling Hill";
 	private String country = "United States";
 	private String city = "New Haven";
@@ -36,7 +34,9 @@ public class TestBecomeSeller {
 	public WebDriver driver;
 	
 	@BeforeClass
-	public void OpenPage() {		
+	public void OpenPage() {
+		System.out.println("Started method " + this.getClass().getSimpleName() + ".");
+		//Open browser and navigate to Auctionapp page
 		driver = new Browser().getBrowser(browser); 
 		AuctionPage page = new AuctionPage(driver);
 		page.OpenPage();
@@ -47,7 +47,7 @@ public class TestBecomeSeller {
 		Login login = new Login(driver);
 		Home home = new Home(driver);
 		
-		//login on AucctionApp
+		//Login on AucctionApp
 		login.openLogin();
 		login.loginTitle();
 		login.enterEmail(email);
@@ -61,10 +61,12 @@ public class TestBecomeSeller {
 		
 		BecomeSeller seller = new BecomeSeller(driver);
 		
+		//Open become seller page and verify page load correctly
 		seller.clickMyAccountButton();
 		seller.clickBecomeSellerButton();
 		seller.waitForLoad();
-		seller.clickStartSellerButton();
+		
+		//Populate fields in first step
 		seller.scrollToDetailinformation();
 		seller.enterProductName(productName);
 		seller.enterSelectCategory();
@@ -77,12 +79,19 @@ public class TestBecomeSeller {
 		seller.uploadPictures();
 		seller.scrollToNextButton();
 		seller.clickNextButton();
+		
+		//Populate fields in second step
 		seller.waitForLoad();
+		Assert.assertTrue(seller.getSecondStepTitle().contains("SET PRICES"), "Second step of posting product does not load correctly.");
 		seller.scrollToSetPrices();
 		seller.enterProductPrice(price);
-		seller.enterStartDate(startDate);
-		seller.enterEndDate(endDate);
+		seller.enterStartDate();
+		seller.enterEndDate();
 		seller.clickNextButtonOnSetPrice();
+		
+		//Populate fields in third step
+		seller.waitForLoad();
+		Assert.assertTrue(seller.getThirdStepTitle().contains("LOCATION & SHIPPING"), "Third step of posting product does not load correctly.");
 		seller.scrollToLocationAndShiping();
 		seller.enterAddress(address);
 		seller.enterCountry(country);
@@ -95,27 +104,27 @@ public class TestBecomeSeller {
 		seller.enterCardExperationYear(cardYear, cardMonth);
 		seller.enterCVC(cardCVC);
 		seller.clickDoneButton();
+		Assert.assertTrue(seller.getCongratsMessage().contains("Product successfully added"), "Product is not posted correctly.");
 		seller.waitForLoad();		
 	}
 	
 	@Test(priority = 2)
 	public void CheckSetProduct() {
 		Seller product = new Seller(driver);
-			
+		
+		//Open seller form and verify that product is on the list of active products
 		product.waitForLoad();
 		product.clickSeller();
+		Assert.assertTrue(product.getSellerPageTittle().contains("SELLER"), "Seller page does not load correctly.");
 		product.scrollActiveProducts();
 		product.selectProductAndClickView(productName);
 		product.waitForLoad();
-		Assert.assertEquals(product.verifyProductAuction(), productName);
-				
+		Assert.assertEquals(product.verifyProductAuction(), productName, "Auction for product with" + productName + "does not load correctly.");
+		System.out.println("TestBecomeSeller is finished and window is closing up.");
 	}
 	
 	@AfterClass
 	public void Close() {
 		AuctionPage page = new AuctionPage(driver);
-		page.ClosePage();
-		
-	}
-
-}
+		page.ClosePage();		
+	}}

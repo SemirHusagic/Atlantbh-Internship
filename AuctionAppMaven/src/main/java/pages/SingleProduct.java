@@ -21,7 +21,7 @@ public class SingleProduct {
 	public WebDriver driver;
 	
 	By enterBidField = By.xpath("//input[@placeholder='Enter bid']");
-	By placeBidButton = By.xpath("//button[@class='bid-button']");
+	By placeBidButton = By.xpath("/html[1]/body[1]/app-root[1]/app-product-page[1]/section[1]/div[1]/form[1]/div[1]/button[1]");
 	By highestPriceDivPath = By.xpath("//p[contains(text(),'Highest bid:')]");
 	By detailsDivPath = By.xpath("//div[@class='details']");
 	By currentDivPath = By.xpath("//div[@class='current-bid']");
@@ -47,8 +47,7 @@ public class SingleProduct {
 			
 	}
 	
-	public void clickPlaceBid(String price) {
-		if(price != "Auction not started.")
+	public void clickPlaceBid() {
 			driver.findElement(placeBidButton).click();
 	}
 	

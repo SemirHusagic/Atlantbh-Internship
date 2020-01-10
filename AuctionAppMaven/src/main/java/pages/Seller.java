@@ -5,9 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 public class Seller {
@@ -16,7 +13,7 @@ public class Seller {
 	By activeProductButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-seller[1]/section[1]/ul[1]/li[1]/p[1]");
 	By soldProductButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-seller[1]/section[1]/ul[1]/li[2]/p[1]");
 	By productName = By.xpath("/html[1]/body[1]/app-root[1]/app-product-page[1]/section[1]/div[1]/h2[1]");
-//	By = By.xpath("");
+	By sellerPageTittle= By.xpath("//li[contains(text(),'seller')]");
 //	By = By.xpath("");
 //	By = By.xpath("");
 //	By = By.xpath("");
@@ -38,8 +35,7 @@ public class Seller {
 	public void findProduct(String product) {
 		WebElement element = driver.findElement(By.xpath("//td[contains(text(),'"+ product +"')]"));
 		scrollTo(element);
-		waitForLoad();
-		
+		waitForLoad();		
 	}
 	
 	public void selectProductAndClickView(String productName) {
@@ -70,35 +66,11 @@ public class Seller {
 		waitForLoad();
 	}
 	
-	
-	
-	
-	
-//	public void date() {
-//	DateFormat formatdate = new SimpleDateFormat("MM/dd/yyyy");
-//	
-//	Date systemDate = new Date();
-//	
-//	String dateOfSystem =  formatdate.format(systemDate);
-//	System.out.println(dateOfSystem);
-//	
-////	if(dateOfSystem.contains("/")) {
-////		String[] day = dateOfSystem.split("/");
-////		System.out.println(day);
-////	}
-//	
-//	for(String time:dateOfSystem.split("/")){  
-//		String month = time;
-//		String day = time;
-//		String year = time;
-//		System.out.println(month + "-" + day + "-" + year);
-//		}
-//	}
-	
 	public void waitForLoad() {
 		Actions action = new Actions(driver);
 		action.pause(java.time.Duration.ofSeconds(2)).perform();
 	}
+	
 	public void scrollTo(WebElement element) {		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
@@ -110,5 +82,8 @@ public class Seller {
 		js.executeScript("arguments[0].scrollIntoView();", element);
 	}	
 	
-
+	public String getSellerPageTittle() {
+		String title = driver.findElement(sellerPageTittle).getText();
+		return title;
+	}
 }

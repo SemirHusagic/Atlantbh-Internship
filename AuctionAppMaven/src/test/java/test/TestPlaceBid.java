@@ -66,7 +66,7 @@ public class TestPlaceBid {
 		//Place a bid		
 		product.enterBid(bidValue);
 		product.waitToLoad();
-		product.clickPlaceBid(bidValue);
+		product.clickPlaceBid();
 				
 		//Verify that you are the higher bidder
 		product.sendAssert();
@@ -96,7 +96,7 @@ public class TestPlaceBid {
 		//Place a bid
 		product.enterBid(bidValue);
 		product.waitToLoad();
-		product.clickPlaceBid(bidValue);
+		product.clickPlaceBid();
 		
 		//Verify that you enter lower price
 		product.sendAssert();
@@ -126,7 +126,7 @@ public class TestPlaceBid {
 		//Place a bid
 		product.enterBid(bidValue);
 		product.waitToLoad();
-		product.clickPlaceBid(bidValue);
+		product.clickPlaceBid();
 				
 		//Verify that you enter lower price
 		product.sendAssert();

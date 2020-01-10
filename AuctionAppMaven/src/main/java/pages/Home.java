@@ -31,11 +31,7 @@ public class Home {
 		action.moveToElement(element).click().perform();
 	}
 	
-	public void clickBidNow() {
-//		WebElement element = driver.findElement(bidNowButton);
-//		Actions action = new Actions(driver);
-//		action.moveToElement(element).click().perform();
-		
+	public void clickBidNow() {		
 		WebDriverWait wait = new WebDriverWait(driver, 60); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(bidNowButton)); 
 	    driver.findElement(bidNowButton).click();

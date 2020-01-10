@@ -1,5 +1,10 @@
 package pages;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -59,7 +64,7 @@ public class BecomeSeller {
 	By cardMonthExpiration = By.xpath("//app-last-step//app-select-input[2]//div[1]//div[1]//p[1]");
 	By cvc = By.xpath("//input[@id='cvc']");
 	By doneButton = By.xpath("//button[@class='done']");
-//	By = By.xpath("");
+	By postingProductSuccess = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/app-alert[1]/div[1]/div[1]/div[1]");
 //	By = By.xpath("");
 //	By = By.xpath("");
 //	By = By.xpath("");
@@ -81,6 +86,7 @@ public class BecomeSeller {
 	public void clickStartSellerButton() {
 		String startSelling = driver.findElement(noProductSellByNow).getText();
 		
+		//Verify that page for posting product load correctly
 		if(startSelling.indexOf(expectedStartSelling) != -1) {
 		String actualSellingTitle = driver.findElement(sellTitle).getText();
 		driver.findElement(buttonStartSelling).click();
@@ -141,13 +147,41 @@ public class BecomeSeller {
 		driver.findElement(setPriceNextButton).click();
 	}
 	
-	public void enterStartDate(String date) {
-		driver.findElement(startDate).sendKeys(date);
+	public void enterStartDate() {
+		DateFormat formatdate = new SimpleDateFormat("MM/dd/yyyy");
+		
+		Date systemDate = new Date();
+		
+		String dateOfSystem =  formatdate.format(systemDate);
+		
+		String[] s = dateOfSystem.split("/"); 
+		String month = s[0];
+		String day = s[1];
+		String year = s[2];
+		
+		Calendar c = Calendar.getInstance();
+		c.set(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day));
+		c.add(Calendar.DATE, 1);
+		driver.findElement(startDate).sendKeys( Integer.toString(c.get(Calendar.MONTH)) + "/" + Integer.toString(c.get(Calendar.DATE)) + "/" +  Integer.toString(c.get(Calendar.YEAR)) );
 	}
 	
-	public void enterEndDate(String date) {
-		driver.findElement(endDate).sendKeys(date);
-	}
+	public void enterEndDate() {
+		DateFormat formatdate = new SimpleDateFormat("MM/dd/yyyy");
+		
+		Date systemDate = new Date();
+		
+		String dateOfSystem =  formatdate.format(systemDate);
+		
+		String[] s = dateOfSystem.split("/"); 
+		String month = s[0];
+		String day = s[1];
+		String year = s[2];
+		
+		Calendar c = Calendar.getInstance();
+		c.set(Integer.parseInt(year), Integer.parseInt(month), Integer.parseInt(day));
+		c.add(Calendar.DATE, 2);
+		driver.findElement(endDate).sendKeys( Integer.toString(c.get(Calendar.MONTH)) + "/" + Integer.toString(c.get(Calendar.DATE)) + "/" +  Integer.toString(c.get(Calendar.YEAR)) );		
+	}	
 	
 	public void enterAddress(String Address) {
 		driver.findElement(address).sendKeys(Address);
@@ -241,5 +275,20 @@ public class BecomeSeller {
 	public void waitForLoad() {
 		Actions action = new Actions(driver);
 		action.pause(java.time.Duration.ofSeconds(2)).perform();
-	}	
+	}
+	
+	public String getSecondStepTitle() {
+		String title = driver.findElement(setPricesTitle).getText();
+		return title;
+	}
+	
+	public String getThirdStepTitle() {
+		String title = driver.findElement(locationAndShipingTitle).getText();
+		return title;
+	}
+	
+	public String getCongratsMessage() {
+		String title = driver.findElement(postingProductSuccess).getText();
+		return title;
+	}
 }

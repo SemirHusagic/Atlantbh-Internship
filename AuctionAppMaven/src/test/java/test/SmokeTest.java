@@ -67,13 +67,12 @@ public class SmokeTest {
 		product.enterBid(bidValue);
 		product.waitToLoad();
 		System.out.println("Placing a bid.");
-		product.clickPlaceBid(bidValue);
+		product.clickPlaceBid();
 		
 		//Verify that you are the higher bidder
 		product.sendAssert();
 		product.waitToLoad(); 
-		System.out.println("Smoke Test is finished and window is closing up.");
-		
+		System.out.println("Smoke Test is finished and window is closing up.");		
  	}			
 	
 	@AfterClass
@@ -81,6 +80,5 @@ public class SmokeTest {
 		//Close the page
 		AuctionPage close = new AuctionPage(driver);
 		close.ClosePage();
-	}	
-		
+	}			
 }

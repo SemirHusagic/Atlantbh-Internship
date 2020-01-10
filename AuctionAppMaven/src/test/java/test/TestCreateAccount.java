@@ -1,5 +1,6 @@
 package test;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -15,16 +16,15 @@ public class TestCreateAccount {
 	private String browser = "chrome";
 	private String first_name = "Gal";
 	private String last_name = "Ledram";
-	private String email = "ldmgal11@example.com";
+	private String email = "ldmgal15@example.com";
 	private String password = "Ng%JFK0j";
 	private String confirm_password ="Ng%JFK0j";
-	private String expected_register = "REGISTER";
-	private String error_register_message = "Page did not load correctly.";
 	
 	public WebDriver driver;
 	
 	@BeforeClass
-	public void OpenPage() {		
+	public void OpenPage() {
+		System.out.println("Started method " + this.getClass().getSimpleName() + ".");
 		driver = new Browser().getBrowser(browser);
 		AuctionPage page = new AuctionPage(driver);
 		page.OpenPage();
@@ -41,7 +41,7 @@ public class TestCreateAccount {
 		account.openCreateAnAccount();
 		
 		//Confirm that page is loaded
-//		AssertJUnit.assertEquals(account.getRegisterTitle(), expected_register, error_register_message);
+		Assert.assertEquals(account.getRegisterTitle(), "REGISTER", "Page did not load correctly.");
 
 		//Populate register fields
 		account.enterFirstName(first_name);
@@ -57,7 +57,7 @@ public class TestCreateAccount {
 		//Verify that login page is displayed
 		account.waitForLoad();
 		login.loginTitle();
-		
+		System.out.println("TestCreateAccount is finished and window is closing up.");
 	}
 	
 	@AfterClass
