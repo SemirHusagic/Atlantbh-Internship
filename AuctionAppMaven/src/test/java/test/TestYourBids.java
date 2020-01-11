@@ -74,7 +74,7 @@ public class TestYourBids {
 		bid.clickYourBids();
 		bid.scrollToBidTable();
 		bid.selectProductAndClickView(productName);	
-		//afasfd
+		
 	}
 	
 	@AfterClass
