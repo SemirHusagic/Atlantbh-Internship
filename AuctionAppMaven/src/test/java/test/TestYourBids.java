@@ -73,7 +73,8 @@ public class TestYourBids {
 		bid.openMyAccountMenu();
 		bid.clickYourBids();
 		bid.scrollToBidTable();
-		bid.selectProductAndClickView(productName);		
+		bid.selectProductAndClickView(productName);	
+		//afasfd
 	}
 	
 	@AfterClass
