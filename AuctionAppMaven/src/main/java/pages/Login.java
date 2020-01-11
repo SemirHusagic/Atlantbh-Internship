@@ -12,14 +12,14 @@ public class Login {
 	private String title_page = "LOGIN";
 	private String login_message = "Login page did not load correctly.";
 	
-	public WebDriver driver;
-	
 	By login = By.xpath("//a[contains(text(),'Login')]");
 	By email = By.xpath("//input[@id='email']");
 	By password = By.xpath("//input[@id='password']");
 	By login_button = By.xpath("//button[@class='login-button']");
 	By forgot_password = By.xpath("//a[@class='forgot-password']");
 	By login_title = By.xpath("//span[contains(text(),'login')]");
+	
+	public WebDriver driver;
 	
 	public Login(WebDriver driver) {
 		this.driver = driver;
@@ -59,8 +59,4 @@ public class Login {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].scrollIntoView();", element);
 	}
-
 }
-
-
-

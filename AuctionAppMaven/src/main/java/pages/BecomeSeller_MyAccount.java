@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-public class BecomeSeller {
+public class BecomeSeller_MyAccount {
 	
 	private String expectedStartSelling = "SELL";
 	private String messageSartSelling = "There is problem with start selling product.";
@@ -21,7 +21,6 @@ public class BecomeSeller {
 	private String pictureOnePath = "/Users/semir/Desktop/picture1.jpg";
 	private String pictureTwoPath = "/Users/semir/Desktop/picture2.jpg";
 	private String pictureThreePath = "/Users/semir/Desktop/picture3.jpg";
-
 	
 	By myAccountButton = By.xpath("//body/app-root/app-header/nav[@class='navigation container']/div[@class='nav-links']/span[1]");
 	By becomeSeller = By.xpath("//span[contains(text(),'Become Seller')]");
@@ -66,12 +65,10 @@ public class BecomeSeller {
 	By doneButton = By.xpath("//button[@class='done']");
 	By postingProductSuccess = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/app-alert[1]/div[1]/div[1]/div[1]");
 //	By = By.xpath("");
-//	By = By.xpath("");
-//	By = By.xpath("");
 	
 	public WebDriver driver;
 	
-	public BecomeSeller(WebDriver driver) {
+	public BecomeSeller_MyAccount(WebDriver driver) {
 		this.driver = driver;
 	}
 	
@@ -217,7 +214,6 @@ public class BecomeSeller {
 		driver.findElement(cardYearExpiration).click();
 		driver.findElement(By.xpath("//li[contains(text(),'" + Year + "')]")).click();
 		driver.findElement(cardMonthExpiration).click();
-//		driver.findElement(By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-last-step[1]/div[1]/div[6]/div[2]/div[1]/div[1]/app-select-input[2]/div[1]/div[1]/ul[1]/li["+ Month +"]")).click();
 		driver.findElement(By.xpath("//li[contains(text(),'" + Month + "')]")).click();
 	}
 	

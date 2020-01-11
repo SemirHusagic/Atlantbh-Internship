@@ -14,7 +14,7 @@ import pages.SingleProduct;
 public class SmokeTest {
 	
 	private String browser = "chrome";
-	private String email = "sema2@gmail.com";
+	private String email = "sema3@gmail.com";
 	private String password = "!Qq123";
 	private String bidValue;
 	
@@ -58,7 +58,7 @@ public class SmokeTest {
 		home.clickBidNow();
 		System.out.println("Open product and make bid.");
 		product.waitToLoad();
-		product.getPageTitle();
+		product.verifySingleProductPage();
 		
 		//Determine the bid value to enter
 		bidValue = product.enterBidPrice();
@@ -72,7 +72,7 @@ public class SmokeTest {
 		//Verify that you are the higher bidder
 		product.sendAssert();
 		product.waitToLoad(); 
-		System.out.println("Smoke Test is finished and window is closing up.");		
+		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");	
  	}			
 	
 	@AfterClass

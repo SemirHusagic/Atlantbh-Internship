@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import java.util.List;
 
-public class Seller {
+public class Seller_MyAccount {
 	
 	By sellerButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/ul[1]/li[2]/a[1]");
 	By activeProductButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-seller[1]/section[1]/ul[1]/li[1]/p[1]");
@@ -15,16 +15,10 @@ public class Seller {
 	By productName = By.xpath("/html[1]/body[1]/app-root[1]/app-product-page[1]/section[1]/div[1]/h2[1]");
 	By sellerPageTittle= By.xpath("//li[contains(text(),'seller')]");
 //	By = By.xpath("");
-//	By = By.xpath("");
-//	By = By.xpath("");
-//	By = By.xpath("");
-//	By = By.xpath("");
-//	By = By.xpath("");
-//	By = By.xpath("");
 	
 	public WebDriver driver;
 	
-	public Seller(WebDriver driver) {
+	public Seller_MyAccount(WebDriver driver) {
 		this.driver = driver;
 	}
 	

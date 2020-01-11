@@ -7,10 +7,10 @@ import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import helper.AuctionPage;
 import helper.Browser;
-import pages.BecomeSeller;
+import pages.BecomeSeller_MyAccount;
 import pages.Home;
 import pages.Login;
-import pages.Seller;
+import pages.Seller_MyAccount;
 
 public class TestBecomeSeller {
 	
@@ -59,7 +59,7 @@ public class TestBecomeSeller {
 	@Test(priority = 1)
 	public void StartSellingProduct() {
 		
-		BecomeSeller seller = new BecomeSeller(driver);
+		BecomeSeller_MyAccount seller = new BecomeSeller_MyAccount(driver);
 		
 		//Open become seller page and verify page load correctly
 		seller.clickMyAccountButton();
@@ -67,6 +67,7 @@ public class TestBecomeSeller {
 		seller.waitForLoad();
 		
 		//Populate fields in first step
+		seller.clickStartSellerButton();
 		seller.scrollToDetailinformation();
 		seller.enterProductName(productName);
 		seller.enterSelectCategory();
@@ -110,7 +111,7 @@ public class TestBecomeSeller {
 	
 	@Test(priority = 2)
 	public void CheckSetProduct() {
-		Seller product = new Seller(driver);
+		Seller_MyAccount product = new Seller_MyAccount(driver);
 		
 		//Open seller form and verify that product is on the list of active products
 		product.waitForLoad();
@@ -120,11 +121,12 @@ public class TestBecomeSeller {
 		product.selectProductAndClickView(productName);
 		product.waitForLoad();
 		Assert.assertEquals(product.verifyProductAuction(), productName, "Auction for product with" + productName + "does not load correctly.");
-		System.out.println("TestBecomeSeller is finished and window is closing up.");
+		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");
 	}
 	
 	@AfterClass
 	public void Close() {
 		AuctionPage page = new AuctionPage(driver);
 		page.ClosePage();		
-	}}
+	}	
+}

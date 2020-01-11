@@ -3,7 +3,6 @@ package test;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
 import org.openqa.selenium.WebDriver;
 
 import helper.Browser;
@@ -20,7 +19,6 @@ public class TestPlaceBid {
 	private String bidValue;
 	
 	public WebDriver driver;
-
 	
 	@BeforeClass
 	public void OpenPage() {
@@ -29,7 +27,7 @@ public class TestPlaceBid {
 		open.OpenPage();
 	}
 	
-	@BeforeMethod
+	@BeforeClass
 	public void UserLogin() {
 		
 		Login login = new Login(driver);
@@ -43,20 +41,16 @@ public class TestPlaceBid {
 		login.enterPassword(password);
 		login.clickLogin();
 		
-		//Verify that Home page is displayed
+		//Verify that Home page is displayed and access random item
 		home.waitForLoad();		
 		home.homePageTitle();
-		
-		//Access random item and wait page to load
 		home.clickBidNow();
-		product.waitToLoad();		
-		
-		//Verify that Single product page is displayed
-		product.getPageTitle();
+		product.waitToLoad();	
+		product.verifySingleProductPage();
 	}
 	
-	@Test
-	public void TestCase16() {
+	@Test(priority = 1)
+	public void TestHighesBid() {
 		
 		SingleProduct product = new SingleProduct(driver);
 		
@@ -73,8 +67,8 @@ public class TestPlaceBid {
 		product.waitToLoad();
 	}
 	
-	@Test
-	public void TestCase17() {
+	@Test(priority = 2)
+	public void TestLowestBid() {
 	
 		Home home = new Home(driver);
 		SingleProduct product = new SingleProduct(driver);
@@ -86,8 +80,6 @@ public class TestPlaceBid {
 				
 		//Access random item and wait page to load
 		home.clickBidNow();
-		
-		//Access random item and wait page to load
 		product.waitToLoad();
 		
 		//Determine the lowest value of the bid to enter
@@ -103,8 +95,8 @@ public class TestPlaceBid {
 		product.waitToLoad();	
 	}
 	
-	@Test
-	public void TestCase18() {
+	@Test(priority = 3)
+	public void TestEquelBid() {
 		
 		Home home = new Home(driver);
 		SingleProduct product = new SingleProduct(driver);
@@ -120,7 +112,7 @@ public class TestPlaceBid {
 		//Access random item and wait page to load
 		product.waitToLoad();
 		
-		//Determine the lowest value of the bid to enter
+		//Determine the last bid to enter same price
 		bidValue = product.enterSameBidPrice();
 				
 		//Place a bid
@@ -132,6 +124,7 @@ public class TestPlaceBid {
 		product.sendAssert();
 		product.waitToLoad();		
 	}
+	
 	@AfterClass
 	public void closeTest() {
 		//Close the page

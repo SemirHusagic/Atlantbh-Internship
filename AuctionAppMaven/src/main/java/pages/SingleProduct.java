@@ -16,20 +16,18 @@ public class SingleProduct {
 	private String bidHigher = "Please bid higher or equal to product price!";
 	private String higherBids = "There are higher bids!";
 	private String lowPrice = "Bid should be higher than the current bid.";
-
-	
-	public WebDriver driver;
 	
 	By enterBidField = By.xpath("//input[@placeholder='Enter bid']");
 	By placeBidButton = By.xpath("/html[1]/body[1]/app-root[1]/app-product-page[1]/section[1]/div[1]/form[1]/div[1]/button[1]");
 	By highestPriceDivPath = By.xpath("//p[contains(text(),'Highest bid:')]");
 	By detailsDivPath = By.xpath("//div[@class='details']");
 	By currentDivPath = By.xpath("//div[@class='current-bid']");
-	By pageTitle = By.xpath("//span[contains(text(),'single product')]");	
+	By singleProductPageTitle = By.xpath("//span[contains(text(),'single product')]");	
 	By startsIn = By.xpath("//div[@class='current-bid']");
 	By congrats = By.xpath("//p[contains(text(),'Congrats! You are the highest bidder')]");
 	By alert = By.xpath("//div[@class='alert-wrapper']");
 	
+	public WebDriver driver;
 	
 	public SingleProduct(WebDriver driver) {
 		this.driver = driver;
@@ -41,20 +39,16 @@ public class SingleProduct {
 	}
 	
 	public void enterBid(String price) {
-		if(price != "Auction not started.") {
 			driver.findElement(enterBidField).sendKeys(price);
-		}
-			
 	}
 	
 	public void clickPlaceBid() {
 			driver.findElement(placeBidButton).click();
 	}
 	
-	public void getPageTitle() {
-		String title = driver.findElement(pageTitle).getText();
+	public void verifySingleProductPage() {
+		String title = driver.findElement(singleProductPageTitle).getText();
 		Assert.assertEquals(title, expected_title, singleProduct_message);
-
 	}
 	
 	
@@ -87,15 +81,10 @@ public class SingleProduct {
 			}
 		}
 		return value;
-
 	}
 
 	public String enterBidPrice() {
-		String currentBidDiv = getCurrentDiv();
-		
-		//If auction is not started yet, do not do anything
- 		if(currentBidDiv.indexOf("Starts in") != -1) return "Auction not started.";
- 		else {
+
  			//Auction started
  			String detailsDiv = getDetailsDiv();
  			String highestPriceDiv = getHighestPriceDiv();
@@ -105,9 +94,11 @@ public class SingleProduct {
  			String hb = parsePrice(highestPriceDiv);
  			
  			//Cast/change type from String to Double
+ 			sf = sf.replace(",", "");
  			double startFromPrice = Double.parseDouble(sf);
+ 			hb = hb.replace(",", "");
  			double highestBidPrice = Double.parseDouble(hb);
- 			
+
  			double finalBid;
  			
  			//Return next bid value
@@ -116,9 +107,7 @@ public class SingleProduct {
  			
  			String finalBidStr = Double.toString(finalBid);
  			finalBidStr = finalBidStr.replace('.', ',');
- 			
  			return finalBidStr;
- 		}
 	}
 	
 	public String enterLowerBidPrice() {
@@ -145,7 +134,7 @@ public class SingleProduct {
  			finalBidStr = finalBidStr.replace('.', ',');
  			
  			return finalBidStr;
- 		}
+ 	}
 	
 	public String enterSameBidPrice() {
 		
@@ -171,8 +160,7 @@ public class SingleProduct {
 			finalBidStr = finalBidStr.replace('.', ',');
 			
 			return finalBidStr;
-		}
-	
+	}	
 	
 	public void sendAssert() {
 		String alertWrapper = driver.findElement(alert).getText();

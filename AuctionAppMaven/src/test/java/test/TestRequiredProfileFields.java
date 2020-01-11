@@ -1,5 +1,6 @@
 package test;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -19,14 +20,12 @@ public class TestRequiredProfileFields {
 	private String password = "!Qq123";
 	private String firstName = "Raffaello";
 	private String lastName = "Frederick";
-	private String gender = "Male";	
-	//enter date of birth in format e.g. 23.Feb.1993
-	private String year = "1995";
+	private String gender = "Male";		
+	private String year = "1995"; //enter date of birth in format e.g. 23.Feb.1993
 	private String month = "Oct";
-	private String day = "11";
-	//enter phone number in format e.g. +38761222333
-	private String phoneNumber = "+38761101202";
-	private String newEmail = "rfrederickc@hao123.com";
+	private String day = "11";	
+	private String phoneNumber = "+38761101202"; //enter phone number in format e.g. +38761222333
+	private String newEmail = "semir48@gmail.com";
 	
 	public WebDriver driver;
 	
@@ -42,12 +41,12 @@ public class TestRequiredProfileFields {
 		Login login = new Login(driver);
 		Home home = new Home(driver);
 		
+		//login on AucctionApp
 		login.openLogin();
 		login.loginTitle();
 		login.enterEmail(email);
 		login.enterPassword(password);
-		login.clickLogin();
-		
+		login.clickLogin();		
 		home.waitForLoad();
 		home.homePageTitle();		
 	}
@@ -65,6 +64,7 @@ public class TestRequiredProfileFields {
 		
 		//focus on required form and populate all fields
 		account.scroolToReq();
+		Assert.assertTrue(account.verifyRequiredForm().contains("REQUIRED"), "Required form is not displayed correctly.");
 		account.enterFirstName(firstName);
 		account.enterLastName(lastName);
 		account.enterGender(gender);
@@ -74,9 +74,11 @@ public class TestRequiredProfileFields {
 		
 		//save info and verify profile update
 		account.scroolToAddress();
+		Assert.assertTrue(account.verifyAddresForm().contains("OPTIONAL"), "Addres form is not displayed correctly and save button is not visible.");
 		account.clickSaveButton();
 		account.waitForLoad();
-		account.saveButtonAsster();
+		account.verifyProfileIsUpdate();
+		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");	
 	}
 	
 	@AfterClass

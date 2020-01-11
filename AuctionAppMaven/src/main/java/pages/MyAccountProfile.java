@@ -5,8 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class MyAccountProfile {
@@ -136,8 +134,6 @@ public class MyAccountProfile {
 	public void enterPhoneNumber(String Number) {		
 		driver.findElement(phoneNumber).clear();
 		driver.findElement(phoneNumber).sendKeys(Number);
-//		String actualPhoneAssert = driver.findElement(actualPhoneNumber).getText();
-//		Assert.assertEquals(actualPhoneAssert, expected);
 	}
 	
 	public void enterEmail(String Email) {		
@@ -224,7 +220,7 @@ public class MyAccountProfile {
 		js.executeScript("arguments[0].scrollIntoView();", element);
 	}
 	
-	public void saveButtonAsster() {
+	public void verifyProfileIsUpdate() {
 		
 		String alertWrapper = driver.findElement(alert).getText();
 		
@@ -241,6 +237,18 @@ public class MyAccountProfile {
 		Assert.assertEquals(title, expectedProfileTitle, messageProfileTitle);
 	}
 	
+	public String verifyRequiredForm() {
+		String title = driver.findElement(requiredTitle).getText();
+		return title;
+	}
+	
+	public String verifyCardForm() {
+		String title = driver.findElement(cardInformationTitle).getText();
+		return title;
+	}
+	
+	public String verifyAddresForm() {
+		String title = driver.findElement(optionalTitle).getText();
+		return title;
+	}	
 }
-
-

@@ -1,7 +1,9 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
@@ -41,11 +43,7 @@ public class Shop {
 	By secondProduct = By.xpath("//body//app-collection-item[2]");
 	By descendingText = By.xpath("//p[contains(text(),'Sort by Price Descending')]");
 	By ascendingText = By.xpath("//p[contains(text(),'Sort by Price Ascending')]");
-//	By  = By.xpath("");
-//	By  = By.xpath("");
-//	By  = By.xpath("");
-//	By  = By.xpath("");
-//	By  = By.xpath("");
+	By shopTitle = By.xpath("//span[contains(text(),'shop')]");
 //	By  = By.xpath("");
 	
 	public WebDriver driver;
@@ -130,7 +128,9 @@ public class Shop {
  			String sp = parsePrice(secondProductDetails);
  			
  			//Cast/change type from String to Double
+ 			fp = fp.replace(",", "");
  			double firstProduct = Double.parseDouble(fp);
+ 			sp = sp.replace(",", "");
  			double secondProduct = Double.parseDouble(sp);
  			 			
  			//Return next bid value
@@ -142,7 +142,20 @@ public class Shop {
  				
  				Assert.assertEquals(dropdown, expectedAscendingText, messageAscendingPrice);
  			} 			
- 		}
+ 	}
+	
+	public void scrollToShopTitle() {
+		WebElement element = driver.findElement(shopTitle);
+		scrollTo(element);
+		waitForLoad();
+	}
+	
+	
+	public void scrollTo(WebElement element) {		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView();", element);
+	}
+	
 	public void verifyTimeSorting() {
 		String dropdown = driver.findElement(dropdownSorting).getText();
 		if(dropdown.indexOf(timeDescending) != -1)
@@ -156,5 +169,4 @@ public class Shop {
 		String shopTitle = driver.findElement(shopPageTitle).getText();
 		Assert.assertEquals(shopTitle, expectedShopPageTitle, messageShopPageTitle);
 	}
-
 }

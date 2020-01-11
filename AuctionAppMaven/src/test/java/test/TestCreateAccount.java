@@ -57,7 +57,7 @@ public class TestCreateAccount {
 		//Verify that login page is displayed
 		account.waitForLoad();
 		login.loginTitle();
-		System.out.println("TestCreateAccount is finished and window is closing up.");
+		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");
 	}
 	
 	@AfterClass
@@ -66,5 +66,4 @@ public class TestCreateAccount {
 		AuctionPage close = new AuctionPage(driver);
 		close.ClosePage();
 	}	
-
 }

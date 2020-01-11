@@ -20,7 +20,8 @@ public class TestSortingProducts {
 	public WebDriver driver;
 	
 	@BeforeClass
-	public void OpenPage() {		
+	public void OpenPage() {	
+		System.out.println("Started method " + this.getClass().getSimpleName() + ".");
 		driver = new Browser().getBrowser(browser);
 		AuctionPage page = new AuctionPage(driver);
 		page.OpenPage();
@@ -50,6 +51,7 @@ public class TestSortingProducts {
 		
 		Shop shop = new Shop(driver);
 		
+		//Open shop page and sort product by price descending
 		shop.waitForLoad();
 		shop.verifyShopIsOpen();
 		shop.clickDeafultSorting();
@@ -62,6 +64,7 @@ public class TestSortingProducts {
 	public void TestCase21() {
 		Shop shop = new Shop(driver);
 		
+		//Sort product by time descending
 		shop.clickOnShopButton();
 		shop.verifyShopIsOpen();
 		shop.waitForLoad();
@@ -69,6 +72,7 @@ public class TestSortingProducts {
 		shop.clickTimeDescending();
 		shop.waitForLoad();
 		shop.verifyTimeSorting();
+		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");
 	}
 	
 	@AfterClass
@@ -76,5 +80,4 @@ public class TestSortingProducts {
 		AuctionPage close = new AuctionPage(driver);
 		close.ClosePage();
 	}
-
 }

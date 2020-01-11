@@ -1,10 +1,6 @@
 package pages;
 
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -14,8 +10,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CreateAnAccount {
-	
-	public WebDriver driver;
 	
 	By createAccount = By.xpath("/html[1]/body[1]/app-root[1]/app-header[1]/header[1]/div[1]/div[2]/a[2]");
 	By firstName = By.xpath("//input[@id='fName']");
@@ -27,6 +21,8 @@ public class CreateAnAccount {
 	By loginButton = By.xpath("//span[contains(text(),'Already have an account?')]");
 	By scroolToMidle = By.xpath("//label[contains(text(),'Password')]");
 	By register_title = By.xpath("//span[contains(text(),'register')]");
+	
+	public WebDriver driver;
 		
 	public CreateAnAccount(WebDriver driver) {
 		this.driver = driver;
@@ -60,8 +56,6 @@ public class CreateAnAccount {
 		WebElement button = driver.findElement(registerButton);
 		Actions action = new Actions(driver);		
 		action.moveToElement(button).click().perform();
-		
-
 	}
 	
 	public void scroolPage() {
@@ -84,11 +78,9 @@ public class CreateAnAccount {
 		Actions action = new Actions(driver);
 		action.pause(java.time.Duration.ofSeconds(2)).perform();
 	}
+	
 	public String getRegisterTitle() {
 		String register = driver.findElement(register_title).getText();
 		return register;
 	}
-
 }
-
-

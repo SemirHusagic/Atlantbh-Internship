@@ -1,5 +1,6 @@
 package test;
 
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
@@ -19,13 +20,11 @@ public class TestAllProfileFields {
 	private String password = "!Qq123";
 	private String firstName = "Arnold";
 	private String lastName = "Smith";
-	private String gender = "Male";	
-	//enter date of birth in format e.g. 23.Feb.1993
-	private String year = "1989";
+	private String gender = "Male";		
+	private String year = "1989"; //enter date of birth in format e.g. 23.Feb.1993
 	private String month = "Sep";
-	private String day = "24";
-	//enter phone number in format e.g. +38761222333
-	private String phoneNumber = "+38761000111";
+	private String day = "24";	
+	private String phoneNumber = "+38761000111"; //enter phone number in format e.g. +38761222333
 	private String newEmail = "qa@email.com";
 	private String cardName = "Arnold Smith";
 	private String cardNumber = "5105105105105100";
@@ -41,7 +40,8 @@ public class TestAllProfileFields {
 	public WebDriver driver;
 	
 	@BeforeClass
-	public void OpenPage() {		
+	public void OpenPage() {
+		System.out.println("Started method " + this.getClass().getSimpleName() + ".");
 		driver = new Browser().getBrowser(browser); 
 		AuctionPage page = new AuctionPage(driver);
 		page.OpenPage();
@@ -73,6 +73,7 @@ public class TestAllProfileFields {
 		
 		//focus on required form and populate all fields
 		account.scroolToReq();
+		Assert.assertTrue(account.verifyRequiredForm().contains("REQUIRED"), "Required form is not displayed correctly.");
 		account.enterFirstName(firstName);
 		account.enterLastName(lastName);
 		account.enterGender(gender);
@@ -82,6 +83,7 @@ public class TestAllProfileFields {
 		
 		//focus on card information form and populate all fields
 		account.scroolToCard();
+		Assert.assertTrue(account.verifyCardForm().contains("CARD INFORMATION"), "Card information form is not displayed correctly.");
 		account.enterCardName(cardName);
 		account.enterCardNumber(cardNumber);
 		account.enterCardExperationYear(cardYear, cardMonth);
@@ -89,6 +91,7 @@ public class TestAllProfileFields {
 		
 		//focus on address form and populate all fields
 		account.scroolToAddress();
+		Assert.assertTrue(account.verifyAddresForm().contains("OPTIONAL"), "Addres form is not displayed correctly.");
 		account.enterStreet(street);
 		account.enterCity(city);
 		account.enterZipcode(zipcode);
@@ -98,7 +101,8 @@ public class TestAllProfileFields {
 		//save info and verify profile update
 		account.clickSaveButton();
 		account.waitForLoad();
-		account.saveButtonAsster();
+		account.verifyProfileIsUpdate();
+		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");	
 	}
 
 	@AfterClass
