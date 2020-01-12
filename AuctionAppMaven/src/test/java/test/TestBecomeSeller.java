@@ -121,11 +121,12 @@ public class TestBecomeSeller {
 		product.selectProductAndClickView(productName);
 		product.waitForLoad();
 		Assert.assertEquals(product.verifyProductAuction(), productName, "Auction for product with" + productName + "does not load correctly.");
-		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");
 	}
 	
 	@AfterClass
 	public void Close() {
+		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");
+		//Close the page
 		AuctionPage page = new AuctionPage(driver);
 		page.ClosePage();		
 	}	

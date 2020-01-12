@@ -1,24 +1,21 @@
 package test;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import helper.AuctionPage;
 import helper.Browser;
-import pages.Bid_MyAccount;
 import pages.Home;
 import pages.Login;
-import pages.SingleProduct;
 
-public class TestYourBids {	
+public class TestApplicationInfo {	
 	
 	private String browser = "chrome";
-	private String email = "sema13@gmail.com";
+	private String email = "sema1@gmail.com";
 	private String password = "!Qq123";
-	private String bidValue;
-	private String productName;
 					
 	public WebDriver driver;
 	
@@ -43,36 +40,41 @@ public class TestYourBids {
 		login.enterPassword(password);
 		login.clickLogin();
 		home.waitForLoad();		
+	}	
+	
+	@Test(priority = 0)
+	public void AboutUs() {
+		Home home = new Home(driver);
+		
+		//Scroll to the bottom and open About Us info
+		home.waitForLoad();
+		home.scrollToBottom();
+		home.openAboutUs();
+		Assert.assertTrue(home.aboutUsTitle().contains("About Us"), "About Us page does not load correctly.");
 	}
 	
-	@Test
-	public void YourBids() {
-		Bid_MyAccount bid = new Bid_MyAccount(driver);
+	@Test(priority = 1)
+	public void TermsAndConditions() {
 		Home home = new Home(driver);
-		SingleProduct product = new SingleProduct(driver);
 		
-		//Open Home and verify that page is loaded
+		//Scroll to the bottom and open Terms and Conditions info
+		home.clickOnHomeButton();
 		home.waitForLoad();
-		home.homePageTitle();
-				
-		//Access random item and wait page to load
-		home.clickBidNow();
-		product.waitToLoad();
-		productName = bid.getProductName();
+		home.scrollToBottom();		
+		home.openTermsAndConditions();
+		Assert.assertTrue(home.termsAndConditionsTitle().contains("Terms and Conditions"), "Terms and Conditions page does not load correctly.");
+	}
+	
+	@Test(priority = 2)
+	public void PrivacyAndPolicy() {
+		Home home = new Home(driver);
 		
-		//Place a bid
-		bidValue = product.enterBidPrice();
-		product.enterBid(bidValue);
-		product.waitToLoad();
-		product.clickPlaceBid();
-		product.sendAssert();
-		product.waitToLoad();
-		
-		//Check that bid is register in your bids
-		bid.openMyAccountMenu();
-		bid.clickYourBids();
-		bid.scrollToBidTable();
-		bid.selectProductAndClickView(productName);		
+		//Scroll to the bottom and open Privacy and Policy info
+		home.clickOnHomeButton();
+		home.waitForLoad();
+		home.scrollToBottom();
+		home.openPrivacyAndPolicy();
+		Assert.assertTrue(home.privacyAndPolicyTitle().contains("Privacy and Policy"), "Privacy and Policy page does not load correctly.");
 	}
 	
 	@AfterClass

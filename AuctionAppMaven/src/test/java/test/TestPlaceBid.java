@@ -127,6 +127,7 @@ public class TestPlaceBid {
 	
 	@AfterClass
 	public void closeTest() {
+		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");
 		//Close the page
 		AuctionPage close = new AuctionPage(driver);
 		close.ClosePage();

@@ -123,6 +123,8 @@ public class TestAllProfileFieldsWithInvalidInputs {
 
 	@AfterClass
 	public void Close() {
+		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");
+		//Close the page
 		AuctionPage page = new AuctionPage(driver);
 		page.ClosePage();
 		

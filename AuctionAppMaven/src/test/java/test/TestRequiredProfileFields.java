@@ -78,11 +78,12 @@ public class TestRequiredProfileFields {
 		account.clickSaveButton();
 		account.waitForLoad();
 		account.verifyProfileIsUpdate();
-		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");	
 	}
 	
 	@AfterClass
 	public void ClosePage() {
+		System.out.println(this.getClass().getSimpleName() + "is finished and window is closing up.");
+		//Close the page
 		AuctionPage page = new AuctionPage(driver);
 		page.ClosePage();
 	}

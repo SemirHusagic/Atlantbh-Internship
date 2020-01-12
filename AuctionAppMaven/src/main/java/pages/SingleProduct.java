@@ -26,6 +26,7 @@ public class SingleProduct {
 	By startsIn = By.xpath("//div[@class='current-bid']");
 	By congrats = By.xpath("//p[contains(text(),'Congrats! You are the highest bidder')]");
 	By alert = By.xpath("//div[@class='alert-wrapper']");
+	By productName = By.xpath("/html[1]/body[1]/app-root[1]/app-product-page[1]/section[1]/div[1]/h2[1]");
 	
 	public WebDriver driver;
 	
@@ -51,6 +52,10 @@ public class SingleProduct {
 		Assert.assertEquals(title, expected_title, singleProduct_message);
 	}
 	
+	public String getProductName() {
+		String name = driver.findElement(productName).getText();
+		return name;
+	}
 	
 	public String getHighestPriceDiv() {
 		return driver.findElement(highestPriceDivPath).getText();

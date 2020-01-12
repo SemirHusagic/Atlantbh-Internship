@@ -44,6 +44,11 @@ public class Shop {
 	By descendingText = By.xpath("//p[contains(text(),'Sort by Price Descending')]");
 	By ascendingText = By.xpath("//p[contains(text(),'Sort by Price Ascending')]");
 	By shopTitle = By.xpath("//span[contains(text(),'shop')]");
+	By searchBar = By.xpath("/html[1]/body[1]/app-root[1]/app-header[1]/nav[1]/div[2]/div[1]/input[1]");
+	By searchButton = By.xpath("/html[1]/body[1]/app-root[1]/app-header[1]/nav[1]/div[2]/div[1]/fa-icon[1]");
+	By checkProductName = By.xpath("/html[1]/body[1]/app-root[1]/app-shop-page[1]/section[1]/app-shop-navigation[1]/div[1]/app-landing-page-products[1]/div[1]/div[1]/div[1]/app-collection-item[1]/div[1]/h5[1]/a[1]");
+//	By  = By.xpath("");
+//	By  = By.xpath("");
 //	By  = By.xpath("");
 	
 	public WebDriver driver;
@@ -95,6 +100,19 @@ public class Shop {
 	
 	public String getSecondProductPrice() {
 		return driver.findElement(secondProduct).getText();
+	}
+	
+	public void populateSearchBar(String productName) {
+		driver.findElement(searchBar).sendKeys(productName);
+	}
+	
+	public void clickSearchButton() {
+		driver.findElement(searchButton).click();
+	}
+	
+	public String verifyProductIsFind () {
+		String name = driver.findElement(checkProductName).getText();
+		return name;
 	}
 	
 	public String parsePrice(String s) {

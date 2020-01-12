@@ -1,21 +1,24 @@
 package test;
 
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
-import helper.Browser;
 import helper.AuctionPage;
+import helper.Browser;
 import pages.Home;
 import pages.Login;
 import pages.Shop;
+import pages.SingleProduct;
 
-public class TestSortingProducts {
+public class TestSearchOption {
 	
 	private String browser = "chrome";
 	private String email = "sema1@gmail.com";
 	private String password = "!Qq123";
+	private String productName;
 	
 	public WebDriver driver;
 	
@@ -39,39 +42,30 @@ public class TestSortingProducts {
 		login.enterEmail(email);
 		login.enterPassword(password);
 		login.clickLogin();
+		home.waitForLoad();			
+	}
+	
+	@Test
+	public void SearchOption() {
+		Home home = new Home(driver);
+		SingleProduct product = new SingleProduct(driver);
+		Shop shop = new Shop(driver);
 		
-		//Verify that home page is displayed and open Shop
+		//Open Home and verify that page is loaded
 		home.waitForLoad();
 		home.homePageTitle();
-		home.clickOnShopButton();		
-	}
-	
-	@Test
-	public void TestCase20() {
+				
+		//Access random item and wait page to load
+		home.clickBidNow();
+		product.waitToLoad();
 		
-		Shop shop = new Shop(driver);
-		
-		//Open shop page and sort product by price descending
-		shop.waitForLoad();
-		shop.verifyShopIsOpen();
-		shop.clickDeafultSorting();
-		shop.clickPriceDescending();
-		shop.waitForLoad();
-		shop.comperPricesAndVerifySorting();
-	}
-	
-	@Test
-	public void TestCase21() {
-		Shop shop = new Shop(driver);
-		
-		//Sort product by time descending
-		shop.clickOnShopButton();
-		shop.verifyShopIsOpen();
-		shop.waitForLoad();
-		shop.clickDeafultSorting();
-		shop.clickTimeDescending();
-		shop.waitForLoad();
-		shop.verifyTimeSorting();
+		//Get product name, search it and verify that product is found
+		productName = product.getProductName();
+		System.out.println(productName);
+		shop.populateSearchBar(productName);
+		shop.clickSearchButton();
+		shop.scrollToShopTitle();
+		Assert.assertTrue(shop.verifyProductIsFind().contains(productName), "Products names are not matching.");
 	}
 	
 	@AfterClass
