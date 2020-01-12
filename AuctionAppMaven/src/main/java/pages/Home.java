@@ -44,7 +44,9 @@ public class Home {
 	public void clickBidNow() {		
 		WebDriverWait wait = new WebDriverWait(driver, 60); 
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(bidNowButton)); 
-	    driver.findElement(bidNowButton).click();
+		WebElement element = driver.findElement(bidNowButton);
+		Actions action = new Actions(driver);
+		action.moveToElement(element).click().perform();
 	}
 	
 	public void clickOnShopButton() {
