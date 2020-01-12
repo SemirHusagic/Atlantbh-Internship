@@ -50,32 +50,26 @@ public class SmokeTest {
 		System.out.println("Verifying home page is load.");
 		//Wait 3 seconds for page to load
 		home.waitForLoad();
-		System.out.println("get home page title");
+		
 		//Confirm that page is loaded
 		home.homePageTitle();
 		
 		//Access random item and wait page to load
-		System.out.println("on home page, click bid now");
 		home.clickBidNow();
 		System.out.println("Open product and make bid.");
 		product.waitToLoad();
-		System.out.println("verify single product page");
 		product.verifySingleProductPage();
 		
-		System.out.println("determinate bid value to enter");
 		//Determine the bid value to enter
 		bidValue = product.enterBidPrice();
 		
-		//If auction is started - place a bid	
-		System.out.println("enter bid value");
+		//If auction is started - place a bid		
 		product.enterBid(bidValue);
 		product.waitToLoad();
 		System.out.println("Placing a bid.");
-		System.out.println("click bid");
 		product.clickPlaceBid();
 		
 		//Verify that you are the higher bidder
-		System.out.println("verify congrets message");
 		product.sendAssert();
 		product.waitToLoad(); 	
  	}			
