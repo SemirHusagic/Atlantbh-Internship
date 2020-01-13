@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="test.TestAllProfileFieldsWithInvalidInputs"/>
-      <class name="test.TestSortingProducts"/>
-      <class name="test.TestCreateAccount"/>
-      <class name="test.TestBecomeSeller"/>
-      <class name="test.TestYourBids"/>
-      <class name="test.TestAllProfileFields"/>
-      <class name="test.SmokeTest"/>
-      <class name="test.TestRequiredProfileFields"/>
-      <class name="test.TestPlaceBid"/>
-    </classes>
-  </test> <!-- Test -->
+	<test thread-count="5" name="Test">
+		<classes>
+<!-- 			<class name="test.SmokeTest" /> -->
+			<class name="test.TestCreateAccount" />
+			<class name="test.TestRequiredProfileFields" />
+<!-- 			<class name="test.TestAllProfileFields" /> -->
+			<class name="test.TestPlaceBid" />
+<!-- 			<class name="test.TestBecomeSeller" /> -->
+			<class name="test.TestYourBids" />
+			<class name="test.TestProductCategories" />
+			<class name="test.TestSearchOption" />
+			<class name="test.TestSortingProducts" />
+			<class name="test.TestApplicationInfo" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

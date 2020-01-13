@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import java.util.List;
 
-public class Seller_MyAccount {
+public class MyAccountSeller {
 	
 	By sellerButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/ul[1]/li[2]/a[1]");
 	By activeProductButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-seller[1]/section[1]/ul[1]/li[1]/p[1]");
@@ -18,7 +18,7 @@ public class Seller_MyAccount {
 	
 	public WebDriver driver;
 	
-	public Seller_MyAccount(WebDriver driver) {
+	public MyAccountSeller(WebDriver driver) {
 		this.driver = driver;
 	}
 	

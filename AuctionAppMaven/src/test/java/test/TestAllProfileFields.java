@@ -16,7 +16,7 @@ import pages.MyAccountProfile;
 public class TestAllProfileFields {
 	
 	private String browser = "chrome";
-	private String email = "sema50@gmail.com";
+	private String email = "sema1@gmail.com";
 	private String password = "!Qq123";
 	private String firstName = "Arnold";
 	private String lastName = "Smith";
@@ -25,9 +25,9 @@ public class TestAllProfileFields {
 	private String month = "Sep";
 	private String day = "24";	
 	private String phoneNumber = "+38761000111"; //enter phone number in format e.g. +38761222333
-	private String newEmail = "qa@email.com";
+	private String newEmail = "sema1@gmail.com";
 	private String cardName = "Arnold Smith";
-	private String cardNumber = "5105105105105100";
+	private String cardNumber = "5200828282828210";
 	private String cardYear = "2020";
 	private String cardMonth = "8";
 	private String cardCVC = "1223";

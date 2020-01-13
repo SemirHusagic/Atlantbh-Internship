@@ -1,6 +1,8 @@
 package pages;
 
 
+import java.util.Random;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -20,7 +22,7 @@ public class CreateAnAccount {
 	By registerButton = By.xpath("//button[contains(text(),'Register')]");
 	By loginButton = By.xpath("//span[contains(text(),'Already have an account?')]");
 	By scroolToMidle = By.xpath("//label[contains(text(),'Password')]");
-	By register_title = By.xpath("//span[contains(text(),'register')]");
+	By registerTitle = By.xpath("//span[contains(text(),'register')]");
 	
 	public WebDriver driver;
 		
@@ -40,8 +42,19 @@ public class CreateAnAccount {
 		driver.findElement(lastName).sendKeys(last_name);
 	}
 	
-	public void enterEmal(String user_email) {
-		driver.findElement(email).sendKeys(user_email);
+	public void enterEmail(String mail) {
+		driver.findElement(email).sendKeys(mail);
+
+	}
+	
+	public String randomEmail() {
+		
+		int upperbound=1000;
+		Random random = new Random();
+	    int int_random = random.nextInt(upperbound); 
+		String number = Integer.toString(int_random);
+		String newMail = "semir" + number + "@example.com";	
+		return newMail;		
 	}
 	
 	public void enterPassword(String user_password) {
@@ -79,8 +92,13 @@ public class CreateAnAccount {
 		action.pause(java.time.Duration.ofSeconds(2)).perform();
 	}
 	
+	public void waitForLoginForm() {
+		Actions action = new Actions(driver);
+		action.pause(java.time.Duration.ofSeconds(13)).perform();
+	}
+	
 	public String getRegisterTitle() {
-		String register = driver.findElement(register_title).getText();
+		String register = driver.findElement(registerTitle).getText();
 		return register;
 	}
 }

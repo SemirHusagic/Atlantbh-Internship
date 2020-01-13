@@ -9,7 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-public class Bid_MyAccount {
+public class MyAccountYourBids {
 	
 	By myAccountButton = By.xpath("//body/app-root/app-header/nav[@class='navigation container']/div[@class='nav-links']/span[1]");
 	By yourBidsButton = By.xpath("//span[contains(text(),'Your Bids')]");
@@ -21,7 +21,7 @@ public class Bid_MyAccount {
 	
 	public WebDriver driver;
 	
-	public Bid_MyAccount(WebDriver driver) {
+	public MyAccountYourBids(WebDriver driver) {
 		this.driver = driver;
 	}
 	

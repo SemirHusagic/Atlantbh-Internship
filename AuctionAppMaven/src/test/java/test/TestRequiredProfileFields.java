@@ -25,7 +25,7 @@ public class TestRequiredProfileFields {
 	private String month = "Oct";
 	private String day = "11";	
 	private String phoneNumber = "+38761101202"; //enter phone number in format e.g. +38761222333
-	private String newEmail = "semir48@gmail.com";
+	private String newEmail = "sema48@gmail.com";
 	
 	public WebDriver driver;
 	

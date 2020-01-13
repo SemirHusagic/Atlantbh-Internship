@@ -12,7 +12,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
-public class BecomeSeller_MyAccount {
+public class MyAccountBecomeSeller {
 	
 	private String expectedStartSelling = "SELL";
 	private String messageSartSelling = "There is problem with start selling product.";
@@ -46,7 +46,7 @@ public class BecomeSeller_MyAccount {
 	By scroolToNextButton = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-first-step[1]/div[1]/div[4]/p[1]");
 	By nextButton = By.xpath("//div[@class='first-step show']//button[@class='next'][contains(text(),'next')]");
 	By setPricesTitle = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/h3[1]");
-	By productPrice = By.xpath("//input[@placeholder='Enter product price']");
+	By productPrice = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-second-step[1]/div[1]/div[1]/div[1]/input[1]");
 	By startDate = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-second-step[1]/div[1]/div[2]/app-custom-date-input[1]/div[1]/div[1]/input[1]");
 	By endDate = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-second-step[1]/div[1]/div[2]/app-custom-date-input[2]/div[1]/div[1]/input[1]");
 	By setPriceNextButton= By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/section[1]/div[1]/div[1]/app-second-step[1]/div[1]/div[3]/button[2]");
@@ -58,17 +58,16 @@ public class BecomeSeller_MyAccount {
 	By phone = By.xpath("//input[@id='phone']");
 	By cardInformationTitle= By.xpath("//h3[contains(text(),'Card Information')]");
 	By cardName = By.xpath("//input[@id='cName']");
-	By cardNumber = By.xpath("//input[@id='cNumber']");
-	By cardYearExpiration = By.xpath("//app-last-step//app-select-input[1]//div[1]//div[1]//p[1]");
-	By cardMonthExpiration = By.xpath("//app-last-step//app-select-input[2]//div[1]//div[1]//p[1]");
-	By cvc = By.xpath("//input[@id='cvc']");
+	By cardNumber = By.xpath("//div[@id='cardNumber']");
+	By cardExpiration = By.xpath("//div[@id='cardExpiry']//div[@class='__PrivateStripeElement']");
+	By cvc = By.xpath("//div[@id='cardCvc']");
 	By doneButton = By.xpath("//button[@class='done']");
 	By postingProductSuccess = By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-add-product[1]/app-alert[1]/div[1]/div[1]/div[1]");
 //	By = By.xpath("");
 	
 	public WebDriver driver;
 	
-	public BecomeSeller_MyAccount(WebDriver driver) {
+	public MyAccountBecomeSeller(WebDriver driver) {
 		this.driver = driver;
 	}
 	
@@ -205,16 +204,16 @@ public class BecomeSeller_MyAccount {
 		driver.findElement(cardName).sendKeys(Name);
 	}
 	
-	public void enterCardNumber(String Number) {		
-		driver.findElement(cardNumber).clear();
-		driver.findElement(cardNumber).sendKeys(Number);
+	public void enterCardNumber(String Number) {
+		Actions action = new Actions(driver);
+		WebElement element = driver.findElement(cardNumber);
+		action.moveToElement(element).build().perform();
+		action.sendKeys(Number).build().perform();
 	}
 	
-	public void enterCardExperationYear(String Year, String Month) {		
-		driver.findElement(cardYearExpiration).click();
-		driver.findElement(By.xpath("//li[contains(text(),'" + Year + "')]")).click();
-		driver.findElement(cardMonthExpiration).click();
-		driver.findElement(By.xpath("//li[contains(text(),'" + Month + "')]")).click();
+	public void enterCardExperationYear(String card) {	
+		driver.findElement(cardExpiration).clear();
+		driver.findElement(cardExpiration).sendKeys(card);
 	}
 	
 	public void enterCVC(String CVC) {		

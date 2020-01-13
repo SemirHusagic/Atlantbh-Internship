@@ -9,15 +9,16 @@ import org.testng.Assert;
 
 public class Login {
 	
-	private String title_page = "LOGIN";
-	private String login_message = "Login page did not load correctly.";
+	private String titlePage = "LOGIN";
+	private String loginMessage = "Login page did not load correctly.";
 	
 	By login = By.xpath("//a[contains(text(),'Login')]");
 	By email = By.xpath("//input[@id='email']");
 	By password = By.xpath("//input[@id='password']");
-	By login_button = By.xpath("//button[@class='login-button']");
-	By forgot_password = By.xpath("//a[@class='forgot-password']");
-	By login_title = By.xpath("//span[contains(text(),'login')]");
+	By loginButton = By.xpath("//button[@class='login-button']");
+	By forgotPassword = By.xpath("//a[@class='forgot-password']");
+	By loginTitle = By.xpath("//span[contains(text(),'login')]");
+	By loginNotification = By.xpath("/html[1]/body[1]/app-root[1]/app-login[1]/app-alert[1]/div[1]/div[1]/div[1]");
 	
 	public WebDriver driver;
 	
@@ -37,15 +38,20 @@ public class Login {
 		driver.findElement(password).sendKeys(user_password);
 	}
 	public void clickLogin() {
-		driver.findElement(login_button).click();
+		driver.findElement(loginButton).click();
+	}
+	
+	public String loginNotificationMessage() {
+		String message = driver.findElement(loginNotification).getText();
+		return message;
 	}
 	public void loginTitle() {
-		String title = driver.findElement(login_title).getText();
-		Assert.assertTrue(title.contains(title_page), login_message);		
+		String title = driver.findElement(loginTitle).getText();
+		Assert.assertTrue(title.contains(titlePage), loginMessage);		
 	}
 	
 	public void scroolToLogin() {		
-		WebElement element = driver.findElement(login_title);
+		WebElement element = driver.findElement(loginTitle);
 		scrollTo(element);
 		waitForLoad();
 	}

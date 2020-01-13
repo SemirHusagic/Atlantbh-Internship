@@ -16,7 +16,7 @@ public class TestCreateAccount {
 	private String browser = "chrome";
 	private String first_name = "Gal";
 	private String last_name = "Ledram";
-	private String email = "ldmgal15@example.com";
+	private String email;
 	private String password = "Ng%JFK0j";
 	private String confirm_password ="Ng%JFK0j";
 	
@@ -46,7 +46,8 @@ public class TestCreateAccount {
 		//Populate register fields
 		account.enterFirstName(first_name);
 		account.enterLastName(last_name);
-		account.enterEmal(email);
+		email = account.randomEmail();
+		account.enterEmail(email);
 		account.enterPassword(password);
 		account.enterConfirmPassword(confirm_password);
 		account.scroolPage();
@@ -55,8 +56,13 @@ public class TestCreateAccount {
 		account.clickRegisterButton();
 		
 		//Verify that login page is displayed
-		account.waitForLoad();
+		account.waitForLoginForm();
+		login.scroolToLogin();
 		login.loginTitle();
+		login.enterEmail(email);
+		login.enterPassword(password);
+		login.clickLogin();
+		Assert.assertTrue(login.loginNotificationMessage().contains("You're successfully logged in"), "Registration failed, user did not login to the page."); 	
 	}
 	
 	@AfterClass

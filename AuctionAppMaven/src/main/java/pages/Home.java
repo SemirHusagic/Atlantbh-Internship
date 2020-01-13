@@ -12,8 +12,8 @@ import org.testng.Assert;
 
 public class Home {
 	
-	private String home_page_text = "MY ACCOUNT";
-	private String home_message = "Home page did not load correctly.";
+	private String homePageText = "MY ACCOUNT";
+	private String homeMessage = "Home page did not load correctly.";
 	
 	By bidNowButton = By.xpath("//a[contains(text(),'bid now')]");
 	By homeText = By.xpath("//a[contains(text(),'my account')]");
@@ -25,8 +25,6 @@ public class Home {
 	By aboutUsTitle = By.xpath("//span[contains(text(),'about us')]");
 	By termsAndConditionsTitle = By.xpath("//span[contains(text(),'terms and conditions')]");
 	By privacyAndPolicyTitle = By.xpath("//span[contains(text(),'privacy and policy')]");
-//	By  = By.xpath("");
-//	By  = By.xpath("");
 //	By  = By.xpath("");
 	
 	public WebDriver driver;
@@ -58,7 +56,7 @@ public class Home {
 	
 	public void homePageTitle() {
 		String title = driver.findElement(homeText).getText();
-		Assert.assertTrue(title.contains(home_page_text), home_message);
+		Assert.assertTrue(title.contains(homePageText), homeMessage);
 	}
 	
 	public void openAboutUs() {

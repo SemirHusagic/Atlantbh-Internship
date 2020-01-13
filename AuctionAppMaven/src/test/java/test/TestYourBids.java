@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import helper.AuctionPage;
 import helper.Browser;
-import pages.Bid_MyAccount;
+import pages.MyAccountYourBids;
 import pages.Home;
 import pages.Login;
 import pages.SingleProduct;
@@ -47,7 +47,7 @@ public class TestYourBids {
 	
 	@Test
 	public void YourBids() {
-		Bid_MyAccount bid = new Bid_MyAccount(driver);
+		MyAccountYourBids bid = new MyAccountYourBids(driver);
 		Home home = new Home(driver);
 		SingleProduct product = new SingleProduct(driver);
 		

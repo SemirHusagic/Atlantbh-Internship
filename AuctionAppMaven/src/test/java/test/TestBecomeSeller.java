@@ -7,10 +7,10 @@ import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
 import helper.AuctionPage;
 import helper.Browser;
-import pages.BecomeSeller_MyAccount;
+import pages.MyAccountBecomeSeller;
 import pages.Home;
 import pages.Login;
-import pages.Seller_MyAccount;
+import pages.MyAccountSeller;
 
 public class TestBecomeSeller {
 	
@@ -26,10 +26,9 @@ public class TestBecomeSeller {
 	private String zipcode = "06520";
 	private String phone = "+38761222333";
 	private String cardName = "Arnold Smith";
-	private String cardNumber = "5555555555554444";
-	private String cardYear = "2020";
-	private String cardMonth = "01";
-	private String cardCVC = "1223";
+	private String cardNumber = "5555 5555 5555 4444";
+	private String cardExpiration = "08/22";
+	private String cardCVC = "123";
 					
 	public WebDriver driver;
 	
@@ -59,7 +58,7 @@ public class TestBecomeSeller {
 	@Test(priority = 1)
 	public void StartSellingProduct() {
 		
-		BecomeSeller_MyAccount seller = new BecomeSeller_MyAccount(driver);
+		MyAccountBecomeSeller seller = new MyAccountBecomeSeller(driver);
 		
 		//Open become seller page and verify page load correctly
 		seller.clickMyAccountButton();
@@ -102,7 +101,7 @@ public class TestBecomeSeller {
 		seller.scrollToCardInformation();
 		seller.enterCardName(cardName);
 		seller.enterCardNumber(cardNumber);
-		seller.enterCardExperationYear(cardYear, cardMonth);
+		seller.enterCardExperationYear(cardExpiration);
 		seller.enterCVC(cardCVC);
 		seller.clickDoneButton();
 		Assert.assertTrue(seller.getCongratsMessage().contains("Product successfully added"), "Product is not posted correctly.");
@@ -111,7 +110,7 @@ public class TestBecomeSeller {
 	
 	@Test(priority = 2)
 	public void CheckSetProduct() {
-		Seller_MyAccount product = new Seller_MyAccount(driver);
+		MyAccountSeller product = new MyAccountSeller(driver);
 		
 		//Open seller form and verify that product is on the list of active products
 		product.waitForLoad();
