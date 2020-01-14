@@ -5,15 +5,15 @@
 		<classes>
 <!-- 			<class name="test.SmokeTest" /> -->
 			<class name="test.TestCreateAccount" />
-			<class name="test.TestRequiredProfileFields" />
+<!-- 			<class name="test.TestRequiredProfileFields" /> -->
 <!-- 			<class name="test.TestAllProfileFields" /> -->
-			<class name="test.TestPlaceBid" />
+<!-- 			<class name="test.TestPlaceBid" /> -->
 <!-- 			<class name="test.TestBecomeSeller" /> -->
-			<class name="test.TestYourBids" />
-			<class name="test.TestProductCategories" />
-			<class name="test.TestSearchOption" />
-			<class name="test.TestSortingProducts" />
-			<class name="test.TestApplicationInfo" />
+<!-- 			<class name="test.TestYourBids" /> -->
+<!-- 			<class name="test.TestProductCategories" /> -->
+<!-- 			<class name="test.TestSearchOption" /> -->
+<!-- 			<class name="test.TestSortingProducts" /> -->
+<!-- 			<class name="test.TestApplicationInfo" /> -->
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

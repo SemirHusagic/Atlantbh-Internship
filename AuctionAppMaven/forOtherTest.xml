@@ -5,7 +5,7 @@
   <test thread-count="5" name="TestSmoke"> 
   
     <classes>      
-     <class name="test.TestBecomeSeller"/>    
+     <class name="test.TestCreateAccount"/>    
     </classes>
   
   </test> <!-- TestSmoke -->
