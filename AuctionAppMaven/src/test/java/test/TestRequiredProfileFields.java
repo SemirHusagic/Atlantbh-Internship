@@ -43,7 +43,7 @@ public class TestRequiredProfileFields {
 		
 		//login on AucctionApp
 		login.openLogin();
-		login.loginTitle();
+//		login.loginTitle();
 		login.enterEmail(email);
 		login.enterPassword(password);
 		login.clickLogin();		

@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.TestBecomeSeller" hash-for-method="StartSellingProduct">StartSellingProduct</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="test.TestCreateAccount" hash-for-method="CreateAccount">CreateAccount</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -120,21 +120,23 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">test.TestBecomeSeller</span>
+              <span class="class-name">test.TestCreateAccount</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="StartSellingProduct">
-                  </a> <!-- StartSellingProduct -->
-                  <span class="method-name">StartSellingProduct</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidElementStateException: invalid element state
+                  <a name="CreateAccount">
+                  </a> <!-- CreateAccount -->
+                  <span class="method-name">CreateAccount</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
   (Session info: chrome=79.0.3945.117)
 Build info: version: &apos;4.0.0-alpha-1&apos;, revision: &apos;d1d3728cae&apos;, time: &apos;2019-04-24T16:15:24&apos;
-System info: host: &apos;Semirs-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:18ad:e77a:c4b9:2140%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.1&apos;, java.version: &apos;1.8.0_231&apos;
+System info: host: &apos;Semirs-MacBook-Pro.local&apos;, ip: &apos;fe80:0:0:0:8a3:4ca0:851f:b856%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.15.1&apos;, java.version: &apos;1.8.0_231&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/hs/_6_s21f124s...}, goog:chromeOptions: {debuggerAddress: localhost:55212}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 29c6cb1d4b7e0ec296ea766453bdfdef
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: /var/folders/hs/_6_s21f124s...}, goog:chromeOptions: {debuggerAddress: localhost:55457}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: cf55faa55840ea5dd2c7f5abc02d22f5
+*** Element info: {Using=xpath, value=//span[contains(text(),&apos;login&apos;)]}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -145,10 +147,12 @@ Session ID: 29c6cb1d4b7e0ec296ea766453bdfdef
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:577)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:308)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:126)
-	at pages.MyAccountBecomeSeller.enterCardExperationYear(MyAccountBecomeSeller.java:215)
-	at test.TestBecomeSeller.StartSellingProduct(TestBecomeSeller.java:104)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:328)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:446)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:320)
+	at pages.Login.scroolToLogin(Login.java:54)
+	at test.TestCreateAccount.CreateAccount(TestCreateAccount.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -186,7 +190,7 @@ Session ID: 29c6cb1d4b7e0ec296ea766453bdfdef
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/hs/_6_s21f124sgv68vdnkzzsx80000gn/T/testng-eclipse--46964568/testng-customsuite.xml</span>
+            <span class="header-content">/private/var/folders/hs/_6_s21f124sgv68vdnkzzsx80000gn/T/testng-eclipse--601541048/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -195,7 +199,7 @@ Session ID: 29c6cb1d4b7e0ec296ea766453bdfdef
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
   &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;test.TestBecomeSeller&quot;/&gt;
+      &lt;class name=&quot;test.TestCreateAccount&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -237,14 +241,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'StartSellingProduct')
-data.setCell(0, 2, 'test.TestBecomeSeller')
-data.setCell(0, 3, 21097);
+data.setCell(0, 1, 'CreateAccount')
+data.setCell(0, 2, 'test.TestCreateAccount')
+data.setCell(0, 3, 17893);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 17 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -270,21 +274,23 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">test.TestBecomeSeller</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">test.TestCreateAccount</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">OpenPage</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
-              <div class="configuration-class before">
-                <span class="method-name">UserLogin</span>
-                <span class="method-start">4728 ms</span>
-              </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">StartSellingProduct</span>
-                <span class="method-start">8172 ms</span>
+                <span class="method-name">CreateAccount</span>
+                <span class="method-start">4740 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">closeTest</span>
+                <span class="method-start">22638 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

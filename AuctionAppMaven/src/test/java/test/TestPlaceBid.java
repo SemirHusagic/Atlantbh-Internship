@@ -36,7 +36,7 @@ public class TestPlaceBid {
 		
 		//Login and enter home page
 		login.openLogin();		
-		login.loginTitle();		
+//		login.loginTitle();		
 		login.enterEmail(email);
 		login.enterPassword(password);
 		login.clickLogin();

@@ -13,7 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CreateAnAccount {
 	
-	By createAccount = By.xpath("/html[1]/body[1]/app-root[1]/app-header[1]/header[1]/div[1]/div[2]/a[2]");
+	By createAccount = By.xpath("//a[contains(text(),'Create an Account')]");
 	By firstName = By.xpath("//input[@id='fName']");
 	By lastName = By.xpath("//input[@id='lName']");
 	By email = By.xpath("//input[@id='email']");

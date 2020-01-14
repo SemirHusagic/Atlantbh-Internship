@@ -35,7 +35,7 @@ public class TestApplicationInfo {
 		
 		//Login on AucctionApp
 		login.openLogin();
-		login.loginTitle();
+//		login.loginTitle();
 		login.enterEmail(email);
 		login.enterPassword(password);
 		login.clickLogin();
