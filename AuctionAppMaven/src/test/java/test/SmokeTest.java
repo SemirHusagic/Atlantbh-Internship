@@ -34,9 +34,9 @@ public class SmokeTest {
 		System.out.println("Enter email, password and login");
 		Login login = new Login(driver);		
 		login.openLogin();
-		login.loginTitle();
+//		login.loginTitle();
 		System.out.println("login naslov");
-		login.scroolToLogin();
+//		login.scroolToLogin();
 		System.out.println("skrolano do naslova");
 		login.enterEmail(email);
 		System.out.println("unesen mail");
