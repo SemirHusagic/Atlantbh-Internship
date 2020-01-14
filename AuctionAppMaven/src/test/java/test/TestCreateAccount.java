@@ -9,11 +9,11 @@ import org.openqa.selenium.WebDriver;
 import helper.Browser;
 import helper.AuctionPage;
 import pages.CreateAnAccount;
-//import pages.Login;
+import pages.Login;
 
 public class TestCreateAccount {
 	
-	private String browser = "chrome";
+	private String browser = "firefox";
 	private String first_name = "Gal";
 	private String last_name = "Ledram";
 	private String email;
@@ -35,7 +35,7 @@ public class TestCreateAccount {
 		
 		CreateAnAccount account = new CreateAnAccount(driver);
 //		Login login = new Login(driver);
-		
+		account.waitForOpen();
 		//Open register page 
 		account.waitForLoad();
 		account.openCreateAnAccount();
