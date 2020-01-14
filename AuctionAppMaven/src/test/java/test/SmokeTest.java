@@ -12,6 +12,7 @@ import java.io.IOException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import helper.Browser;
 import helper.AuctionPage;
@@ -53,7 +54,6 @@ public class SmokeTest {
 		}
 		
 		
-		login.waitForLoad();
 		login.openLogin();
 //		login.loginTitle();
 		System.out.println("login naslov");
@@ -63,6 +63,7 @@ public class SmokeTest {
 		System.out.println("unesen mail");
 		login.enterPassword(password);
 		System.out.println("unesen pas");
+		login.waitForLoad();
 		login.clickLogin();
 	}
 	
