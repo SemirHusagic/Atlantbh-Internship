@@ -34,10 +34,14 @@ public class SmokeTest {
 		System.out.println("Enter email, password and login");
 		Login login = new Login(driver);		
 		login.openLogin();
-//		login.loginTitle();
+		login.loginTitle();
+		System.out.println("login naslov");
 		login.scroolToLogin();
+		System.out.println("skrolano do naslova");
 		login.enterEmail(email);
+		System.out.println("unesen mail");
 		login.enterPassword(password);
+		System.out.println("unesen pas");
 		login.clickLogin();
 	}
 	
@@ -50,6 +54,7 @@ public class SmokeTest {
 		System.out.println("Verifying home page is load.");
 		//Wait 3 seconds for page to load
 		home.waitForLoad();
+		System.out.println("stranica home se ucitala sad treba da klikne bid now");
 		
 		//Confirm that page is loaded
 //		home.homePageTitle();
@@ -58,13 +63,16 @@ public class SmokeTest {
 		home.clickBidNow();
 		System.out.println("Open product and make bid.");
 		product.waitToLoad();
+		System.out.println("ceka da se ucita i sad verifikuje ");
 		product.verifySingleProductPage();
 		
 		//Determine the bid value to enter
 		bidValue = product.enterBidPrice();
+		System.out.println("detektuje koju ce unijet");
 		
 		//If auction is started - place a bid		
 		product.enterBid(bidValue);
+		System.out.println("unio cijenu");
 		product.waitToLoad();
 		System.out.println("Placing a bid.");
 		product.clickPlaceBid();

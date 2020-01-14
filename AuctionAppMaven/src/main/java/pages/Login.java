@@ -17,7 +17,7 @@ public class Login {
 	By password = By.xpath("//input[@id='password']");
 	By loginButton = By.xpath("//button[@class='login-button']");
 	By forgotPassword = By.xpath("//a[@class='forgot-password']");
-	By loginTitle = By.xpath("//span[contains(text(),'login')]");
+	By loginTitle = By.xpath("/html[1]/body[1]/app-root[1]/app-login[1]/app-breadcrumb[1]/div[1]/div[1]/span[1]");
 	By loginNotification = By.xpath("/html[1]/body[1]/app-root[1]/app-login[1]/app-alert[1]/div[1]/div[1]/div[1]");
 	
 	public WebDriver driver;
