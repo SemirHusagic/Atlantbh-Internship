@@ -98,6 +98,8 @@ public class CreateAnAccount {
 	}
 	
 	public String getRegisterTitle() {
+		WebDriverWait wait = new WebDriverWait(driver, 60); 
+		wait.until(ExpectedConditions.visibilityOfElementLocated(registerTitle));
 		String register = driver.findElement(registerTitle).getText();
 		return register;
 	}
