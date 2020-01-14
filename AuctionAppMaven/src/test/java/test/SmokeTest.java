@@ -34,7 +34,7 @@ public class SmokeTest {
 		System.out.println("Enter email, password and login");
 		Login login = new Login(driver);		
 		login.openLogin();
-		login.loginTitle();
+//		login.loginTitle();
 		login.scroolToLogin();
 		login.enterEmail(email);
 		login.enterPassword(password);
@@ -52,7 +52,7 @@ public class SmokeTest {
 		home.waitForLoad();
 		
 		//Confirm that page is loaded
-		home.homePageTitle();
+//		home.homePageTitle();
 		
 		//Access random item and wait page to load
 		home.clickBidNow();
