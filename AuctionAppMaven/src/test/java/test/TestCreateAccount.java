@@ -13,7 +13,7 @@ import pages.Login;
 
 public class TestCreateAccount {
 	
-	private String browser = "firefox";
+	private String browser = "chrome";
 	private String first_name = "Gal";
 	private String last_name = "Ledram";
 	private String email;
