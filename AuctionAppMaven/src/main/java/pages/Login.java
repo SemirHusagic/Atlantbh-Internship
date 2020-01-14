@@ -13,7 +13,7 @@ public class Login {
 	private String loginMessage = "Login page did not load correctly.";
 	
 	By login = By.xpath("//a[contains(text(),'Login')]");
-	By email = By.xpath("/html[1]/body[1]/app-root[1]/app-login[1]/section[1]/form[1]/div[1]/app-input[1]/div[1]/div[1]/input[1]");
+	By email = By.xpath("//input[@id='email']");
 	By password = By.xpath("//input[@id='password']");
 	By loginButton = By.xpath("//button[@class='login-button']");
 	By forgotPassword = By.xpath("//a[@class='forgot-password']");
