@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 import helper.Browser;
 import helper.AuctionPage;
 import pages.CreateAnAccount;
-import pages.Login;
+//import pages.Login;
 
 public class TestCreateAccount {
 	
@@ -34,7 +34,7 @@ public class TestCreateAccount {
 	public void CreateAccount() {
 		
 		CreateAnAccount account = new CreateAnAccount(driver);
-		Login login = new Login(driver);
+//		Login login = new Login(driver);
 		
 		//Open register page 
 		account.waitForLoad();
