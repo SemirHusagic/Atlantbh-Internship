@@ -3,47 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="test.TestBecomeSeller">
-        <methods>
-          <include name="StartSellingProduct"/>
-          <include name="Close"/>
-          <include name="CheckSetProduct"/>
-          <include name="UserLogin"/>
-          <include name="OpenPage"/>
-        </methods>
-      </class> <!-- test.TestBecomeSeller -->
-      <class name="test.TestProductCategories">
-        <methods>
-          <include name="Categories"/>
-          <include name="OpenPage"/>
-          <include name="closeTest"/>
-          <include name="UserLogin"/>
-        </methods>
-      </class> <!-- test.TestProductCategories -->
-      <class name="test.TestAllProfileFields">
-        <methods>
-          <include name="UserLogin"/>
-          <include name="OpenPage"/>
-          <include name="OpenProfile"/>
-          <include name="Close"/>
-        </methods>
-      </class> <!-- test.TestAllProfileFields -->
-      <class name="test.TestSearchOption">
+      <class name="test.TestCreateAccount">
         <methods>
           <include name="closeTest"/>
-          <include name="SearchOption"/>
+          <include name="CreateAccount"/>
           <include name="OpenPage"/>
-          <include name="UserLogin"/>
         </methods>
-      </class> <!-- test.TestSearchOption -->
-      <class name="test.TestYourBids">
-        <methods>
-          <include name="UserLogin"/>
-          <include name="OpenPage"/>
-          <include name="YourBids"/>
-          <include name="Close"/>
-        </methods>
-      </class> <!-- test.TestYourBids -->
+      </class> <!-- test.TestCreateAccount -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
