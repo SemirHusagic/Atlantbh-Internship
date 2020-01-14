@@ -32,7 +32,8 @@ public class SmokeTest {
 	public void LoginPage() {
 		//Login and enter home page
 		System.out.println("Enter email, password and login");
-		Login login = new Login(driver);		
+		Login login = new Login(driver);	
+		login.waitForLoad();
 		login.openLogin();
 //		login.loginTitle();
 		System.out.println("login naslov");
