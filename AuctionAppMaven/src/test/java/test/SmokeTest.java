@@ -9,10 +9,12 @@ import org.apache.commons.io.FileUtils;
 import java.io.File;
 import java.io.IOException;
 
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import helper.Browser;
 import helper.AuctionPage;
@@ -32,9 +34,14 @@ public class SmokeTest {
 	@BeforeClass
 	public void OpenPage() {
 		System.out.println("Started method " + this.getClass().getSimpleName() + ".");
+		
 		driver = new Browser().getBrowser(browser);
 		AuctionPage open = new AuctionPage(driver);
-		open.OpenPage();				
+		open.OpenPage();			
+		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
+		String browserName = caps.getBrowserName();
+		String browserVersion = caps.getVersion();
+		System.out.println(browserName+" "+browserVersion);
 	}
 	
 	@Test(priority = 1)
