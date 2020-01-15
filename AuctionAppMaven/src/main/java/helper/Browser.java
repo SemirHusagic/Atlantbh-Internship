@@ -16,6 +16,7 @@ public class Browser {
 			System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
 			return driver = new ChromeDriver();
 			
+			
 		case "firefox":
 			System.setProperty("webdriver.gecko.driver", "driver/geckodriver");
 			return driver = new FirefoxDriver();

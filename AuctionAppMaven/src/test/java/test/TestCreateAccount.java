@@ -5,6 +5,8 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeClass;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import helper.Browser;
 import helper.AuctionPage;
@@ -28,6 +30,10 @@ public class TestCreateAccount {
 		driver = new Browser().getBrowser(browser);
 		AuctionPage page = new AuctionPage(driver);
 		page.OpenPage();
+		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
+		String browserName = caps.getBrowserName();
+		String browserVersion = caps.getVersion();
+		System.out.println(browserName+" "+browserVersion);
 	}
 	
 	@Test
