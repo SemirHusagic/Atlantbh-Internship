@@ -65,11 +65,20 @@
 			<version>1.0-beta</version>
 		</dependency>
 		
+				<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-chrome-driver -->
 		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-chrome-driver</artifactId>
-			<version>3.141.59</version>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-chrome-driver</artifactId>
+		    <version>4.0.0-alpha-1</version>
 		</dependency>
+
+		
+		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>3.8.0</version>
+</dependency>
 
 		
 		
