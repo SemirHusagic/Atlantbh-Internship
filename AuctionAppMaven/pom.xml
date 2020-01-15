@@ -43,6 +43,14 @@
 		          <target>1.8</target>
 		        </configuration>
 		      </plugin>
+		      
+		      <plugin>
+            <groupId>org.jenkins-ci.tools</groupId>
+            <artifactId>maven-hpi-plugin</artifactId>
+            <configuration>
+                <pluginFirstClassLoader>true</pluginFirstClassLoader>
+            </configuration>
+        </plugin>
  
      </plugins>
 </build>

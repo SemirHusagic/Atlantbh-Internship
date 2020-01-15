@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10267" started-at="2020-01-14T18:40:40 CET" finished-at="2020-01-14T18:40:50 CET">
+  <suite name="Default suite" duration-ms="11942" started-at="2020-01-15T15:12:10 CET" finished-at="2020-01-15T15:12:22 CET">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10267" started-at="2020-01-14T18:40:40 CET" finished-at="2020-01-14T18:40:50 CET">
+    <test name="Default test" duration-ms="11942" started-at="2020-01-15T15:12:10 CET" finished-at="2020-01-15T15:12:22 CET">
       <class name="test.TestCreateAccount">
-        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestCreateAccount@4f063c0a]" name="OpenPage" is-config="true" duration-ms="5234" started-at="2020-01-14T18:40:40 CET" finished-at="2020-01-14T18:40:45 CET">
+        <test-method status="PASS" signature="OpenPage()[pri:0, instance:test.TestCreateAccount@22a67b4]" name="OpenPage" is-config="true" duration-ms="6868" started-at="2020-01-15T15:12:10 CET" finished-at="2020-01-15T15:12:17 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- OpenPage -->
-        <test-method status="PASS" signature="CreateAccount()[pri:0, instance:test.TestCreateAccount@4f063c0a]" name="CreateAccount" duration-ms="4878" started-at="2020-01-14T18:40:45 CET" finished-at="2020-01-14T18:40:50 CET">
+        <test-method status="PASS" signature="CreateAccount()[pri:0, instance:test.TestCreateAccount@22a67b4]" name="CreateAccount" duration-ms="4909" started-at="2020-01-15T15:12:17 CET" finished-at="2020-01-15T15:12:22 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CreateAccount -->
-        <test-method status="PASS" signature="closeTest()[pri:0, instance:test.TestCreateAccount@4f063c0a]" name="closeTest" is-config="true" duration-ms="125" started-at="2020-01-14T18:40:50 CET" finished-at="2020-01-14T18:40:50 CET">
+        <test-method status="PASS" signature="closeTest()[pri:0, instance:test.TestCreateAccount@22a67b4]" name="closeTest" is-config="true" duration-ms="134" started-at="2020-01-15T15:12:22 CET" finished-at="2020-01-15T15:12:22 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeTest -->
