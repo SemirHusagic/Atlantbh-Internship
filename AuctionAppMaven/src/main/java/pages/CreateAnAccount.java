@@ -92,11 +92,6 @@ public class CreateAnAccount {
 		action.pause(java.time.Duration.ofSeconds(2)).perform();
 	}
 	
-	public void waitForOpen() {
-		Actions action = new Actions(driver);
-		action.pause(java.time.Duration.ofSeconds(20)).perform();
-	}
-	
 	public void waitForLoginForm() {
 		Actions action = new Actions(driver);
 		action.pause(java.time.Duration.ofSeconds(13)).perform();
