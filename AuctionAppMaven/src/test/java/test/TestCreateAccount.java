@@ -27,13 +27,14 @@ public class TestCreateAccount {
 	@BeforeClass
 	public void OpenPage() {
 		System.out.println("Started method " + this.getClass().getSimpleName() + ".");
-		driver = new Browser().getBrowser(browser);
-		AuctionPage page = new AuctionPage(driver);
-		page.OpenPage();
 		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
 		String browserName = caps.getBrowserName();
 		String browserVersion = caps.getVersion();
 		System.out.println(browserName+" "+browserVersion);
+		driver = new Browser().getBrowser(browser);
+		AuctionPage page = new AuctionPage(driver);
+		page.OpenPage();
+		
 	}
 	
 	@Test
