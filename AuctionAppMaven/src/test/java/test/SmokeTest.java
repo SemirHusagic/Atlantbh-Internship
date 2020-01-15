@@ -49,17 +49,17 @@ public class SmokeTest {
 		//Login and enter home page
 		System.out.println("Enter email, password and login");
 		Login login = new Login(driver);	
-		
-		TakesScreenshot scrShot =((TakesScreenshot)driver);
-		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-		File DestFile=new File("/Users/Shared/Jenkins/Home/workspace/ss.png");
-		try {
-			FileUtils.copyFile(SrcFile, DestFile);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
+//		
+//		TakesScreenshot scrShot =((TakesScreenshot)driver);
+//		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
+//		File DestFile=new File("/Users/Shared/Jenkins/Home/workspace/ss.png");
+//		try {
+//			FileUtils.copyFile(SrcFile, DestFile);
+//		} catch (IOException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		
 		
 		login.openLogin();
 //		login.loginTitle();
