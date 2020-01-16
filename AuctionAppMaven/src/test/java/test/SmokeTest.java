@@ -24,7 +24,7 @@ import pages.SingleProduct;
 
 public class SmokeTest {
 	
-	private String browser = "chrome";
+	private String browser = "firefox";
 	private String email = "sema3@gmail.com";
 	private String password = "!Qq123";
 	private String bidValue;
