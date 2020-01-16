@@ -42,7 +42,8 @@ public class MyAccountSeller {
 				WebElement element = driver.findElement(By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-seller[1]/section[1]/app-table[1]/section[1]/table[1]/tbody[1]/tr["+ i +"]/td[2]"));
 				scrollToProduct(element);
 				waitForLoad();
-				driver.findElement(By.xpath("//tr["+ i +"]//td[8]//a[1]")).click();
+				driver.findElement(By.xpath("/html[1]/body[1]/app-root[1]/app-profile[1]/app-seller[1]/section[1]/app-table[1]/section[1]/table[1]/tbody[1]/tr[" + i + "]/td[7]")).click();
+				
 				break;
 			}				
 		}

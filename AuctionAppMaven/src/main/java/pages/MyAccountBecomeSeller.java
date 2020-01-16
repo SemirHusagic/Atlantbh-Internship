@@ -58,7 +58,7 @@ public class MyAccountBecomeSeller {
 	By phone = By.xpath("//input[@id='phone']");
 	By cardInformationTitle= By.xpath("//h3[contains(text(),'Card Information')]");
 	By cardName = By.xpath("//input[@id='cName']");
-	By cardNumber = By.xpath("//div[@id='cardNumber']");
+	By cardNumber = By.xpath("//input[@id='cNumber']");
 	By cardExpiration = By.xpath("//div[@id='cardExpiry']//div[@class='__PrivateStripeElement']");
 	By cvc = By.xpath("//div[@id='cardCvc']");
 	By doneButton = By.xpath("//button[@class='done']");

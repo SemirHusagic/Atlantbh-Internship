@@ -1,6 +1,7 @@
 package helper;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -14,7 +15,9 @@ public class Browser {
 			
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", "driver/chromedriver");
-			return driver = new ChromeDriver();
+			ChromeOptions opt = new ChromeOptions();
+			opt.setExperimentalOption("w3c", false);
+			return driver = new ChromeDriver(opt);
 			
 			
 		case "firefox":

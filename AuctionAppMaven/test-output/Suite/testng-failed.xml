@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+  <test thread-count="5" name="TestSmoke(failed)">
     <classes>
-      <class name="test.TestCreateAccount">
+      <class name="test.SmokeTest">
         <methods>
-          <include name="closeTest"/>
-          <include name="CreateAccount"/>
+          <include name="HomePage"/>
+          <include name="tearDownTest"/>
+          <include name="LoginPage"/>
           <include name="OpenPage"/>
         </methods>
-      </class> <!-- test.TestCreateAccount -->
+      </class> <!-- test.SmokeTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- TestSmoke(failed) -->
 </suite> <!-- Failed suite [Suite] -->

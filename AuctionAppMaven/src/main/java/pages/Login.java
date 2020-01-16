@@ -58,7 +58,7 @@ public class Login {
 	
 	public void waitForLoad() {
 		Actions action = new Actions(driver);
-		action.pause(java.time.Duration.ofSeconds(10)).perform();
+		action.pause(java.time.Duration.ofSeconds(2)).perform();
 	}
 	
 	public void scrollTo(WebElement element) {		

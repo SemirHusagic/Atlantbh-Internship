@@ -41,7 +41,7 @@ public class TestCreateAccount {
 	public void CreateAccount() {
 		
 		CreateAnAccount account = new CreateAnAccount(driver);
-//		Login login = new Login(driver);
+		Login login = new Login(driver);
 
 		//Open register page 
 		account.waitForLoad();

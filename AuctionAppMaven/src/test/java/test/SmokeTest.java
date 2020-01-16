@@ -37,11 +37,7 @@ public class SmokeTest {
 		
 		driver = new Browser().getBrowser(browser);
 		AuctionPage open = new AuctionPage(driver);
-		open.OpenPage();			
-		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
-		String browserName = caps.getBrowserName();
-		String browserVersion = caps.getVersion();
-		System.out.println(browserName+" "+browserVersion);
+		open.OpenPage();
 	}
 	
 	@Test(priority = 1)
@@ -49,7 +45,7 @@ public class SmokeTest {
 		//Login and enter home page
 		System.out.println("Enter email, password and login");
 		Login login = new Login(driver);	
-//		
+		
 //		TakesScreenshot scrShot =((TakesScreenshot)driver);
 //		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
 //		File DestFile=new File("/Users/Shared/Jenkins/Home/workspace/ss.png");
@@ -59,12 +55,11 @@ public class SmokeTest {
 //			// TODO Auto-generated catch block
 //			e.printStackTrace();
 //		}
-//		
 		
 		login.openLogin();
-//		login.loginTitle();
+		login.loginTitle();
 		System.out.println("login naslov");
-//		login.scroolToLogin();
+		login.scroolToLogin();
 		System.out.println("skrolano do naslova");
 		login.enterEmail(email);
 		System.out.println("unesen mail");
@@ -86,7 +81,7 @@ public class SmokeTest {
 		System.out.println("stranica home se ucitala sad treba da klikne bid now");
 		
 		//Confirm that page is loaded
-//		home.homePageTitle();
+		home.homePageTitle();
 		
 		//Access random item and wait page to load
 		home.clickBidNow();

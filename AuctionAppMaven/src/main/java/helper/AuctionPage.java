@@ -15,7 +15,7 @@ public class AuctionPage {
 	public void OpenPage() {
 		
 		driver.manage().timeouts().implicitlyWait(1, TimeUnit.MINUTES);
-		driver.get("https://polar-lake-39918.herokuapp.com/home");
+		driver.get("https://auction-webapp.herokuapp.com/home");
 		driver.manage().window().maximize();
 	}
 	
